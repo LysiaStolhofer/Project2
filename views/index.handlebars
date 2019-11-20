@@ -3,9 +3,9 @@
   <div class="nav-wrapper">
     <a href="#" class="brand-logo">Logo</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="sass.html">About</a></li>
-      <li><a href="badges.html">Services</a></li>
-      <li><a href="collapsible.html">Reviews</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#reviews">Reviews</a></li>
     </ul>
   </div>
 </nav>
@@ -19,9 +19,9 @@
         <h2>Primp & Play</h2>
 
         {{!-- Buttons for new member and existing member --}}
-      <a class="waves-effect waves-light btn-large">New Member Sign-Up</a>
+        <a class="waves-effect waves-light btn-large">New Member Sign-Up</a>
 
-      <a class="waves-effect waves-light btn-large">Member Login</a>
+        <a class="waves-effect waves-light btn-large">Member Login</a>
 
         {{!-- Form example
         <form class="clearfix mb-4" action="POST">
@@ -52,77 +52,87 @@
   </div>
 </div> --}}
 
-{{!-- Services List with Icons --}}
-<div class="container">
-  <div class="row">
-    <div class="col l6 s12">
-
-      <i class="fas fa-bath"></i>
-
-    </div>
-  </div>
-</div>
-
-{{!-- Reviews Carousel --}}
-<div class="testimonial_carousel mt50">
-  <div class="testimonial_box">
-    <p>
-      review text
-    </p>
-    <br>
-    <div class="testimonial_author">
-      <img src="assets/img/RJ.jpg" alt="author" />
-      <h5>Name (who said it)</h5>
-      <p>
-        client since <span>example city</span>
-      </p>
-    </div>
-  </div>
-  <!--repeat as often as many reviews you want in the carousel -->
-  <!--Example-->
-  <div class="testimonial_carousel mt50">
-    <div class="testimonial_box">
-      <p>
-        "Primp & Play is the best place for my Coco. I always feel reassured he is in the best hands."
-      </p>
-      <br>
-      <div class="testimonial_author">
-        <img src="example image of client or pet" alt="author" />
-        <h5>Lindsay Mayer</h5>
-        <p>
-          client since April 2013 <span>Chicago</span>
-        </p>
-      </div>
-    </div>
-
-
-    {{!-- Footer --}}
-    <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">Primp & Play</h5>
-            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+{{!-- About Us --}}
+<div id="about">
           </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Links</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-            </ul>
+        {{!-- Services List with Icons --}}
+        <div id="services">
           </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container">
-          © 2019 Copyright
-          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-        </div>
-      </div>
-    </footer>
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
 
-    <!-- Javascript & jQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="/js/index.js"></script>
+                <i class="fas fa-bath"></i>
+
+              </div>
+            </div>
+          </div>
+        
+
+        {{!-- Reviews Carousel --}}
+        <div id ="reviews">
+        </div>
+        <div class="testimonial_carousel mt50">
+          <div class="testimonial_box">
+            <p>
+              review text
+            </p>
+            <br>
+            <div class="testimonial_author">
+              <img src="assets/img/RJ.jpg" alt="author" />
+              <h5>Name (who said it)</h5>
+              <p>
+                client since <span>example city</span>
+              </p>
+            </div>
+          </div>
+          <!--repeat as often as many reviews you want in the carousel -->
+          <!--Example-->
+          <div class="testimonial_carousel mt50">
+            <div class="testimonial_box">
+              <p>
+                "Primp & Play is the best place for my Coco. I always feel reassured he is in the best hands."
+              </p>
+              <br>
+              <div class="testimonial_author">
+                <img src="example image of client or pet" alt="author" />
+                <h5>Lindsay Mayer</h5>
+                <p>
+                  client since April 2013 <span>Chicago</span>
+                </p>
+              </div>
+            </div>
+
+
+            {{!-- Footer --}}
+            <footer class="page-footer">
+              <div class="container">
+                <div class="row">
+                  <div class="col l6 s12">
+                    <h5 class="white-text">Primp & Play</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
+                      content.</p>
+                  </div>
+                  <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                      <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                      <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                      <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                      <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="footer-copyright">
+                <div class="container">
+                  © 2019 Copyright
+                  <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                </div>
+              </div>
+            </footer>
+
+            <!-- Javascript & jQuery -->
+            <script type="text/javascript"
+              src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="/js/index.js"></script>
