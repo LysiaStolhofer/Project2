@@ -4,10 +4,7 @@ module.exports = function(app) {
   // Load index page
   app.get("/", async (req, res) => {
     try {
-      const dbExamples = await db.Example.findAll({});
       res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
       });
     } catch (error) {
       res
@@ -15,6 +12,42 @@ module.exports = function(app) {
         .render("400", { error: { name: error.name, msg: error.message } });
     }
   });
+
+    // Load form page
+    app.get("/enroll", async (req, res) => {
+      try {
+
+        res.render("newform");
+      } catch (error) {
+        res
+          .status(400)
+          .render("400", { error: { name: error.name, msg: error.message } });
+      }
+    });
+
+        // Load Profiles page
+        app.get("/profile", async (req, res) => {
+          try {
+    
+            res.render("profile");
+          } catch (error) {
+            res
+              .status(400)
+              .render("400", { error: { name: error.name, msg: error.message } });
+          }
+        });
+
+       // Load Billing page
+        app.get("/billing", async (req, res) => {
+          try {
+            
+            res.render("bill");
+          } catch (error) {
+            res
+              .status(400)
+              .render("400", { error: { name: error.name, msg: error.message } });
+          }
+          });
 
   // Load example page and pass in an example by id
   app.get("/example/:id", async (req, res) => {
