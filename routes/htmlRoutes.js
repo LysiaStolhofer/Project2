@@ -49,7 +49,7 @@ module.exports = function(app) {
           }
           });
 
-  // Load example page and pass in an example by id
+  // Load Example page and pass in an example by id
   app.get("/example/:id", async (req, res) => {
     try {
       const dbExample = await db.Example.findOne({

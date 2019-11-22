@@ -5,3 +5,5 @@ module.exports = function(sequelize, DataTypes) {
   });
   return Example;
 };
+
+//creating a table in sequelize

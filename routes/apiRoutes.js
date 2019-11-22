@@ -2,7 +2,7 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all data
-  app.get("/api/examples", async (req, res) => {
+  app.get("/api/AllData", async (req, res) => {
     try {
       const data = await db.PrimpnPlay_db.findAll({});
       res.json(data);
@@ -26,7 +26,7 @@ module.exports = function(app) {
     try {
       const data = await db.PrimpnPlay_db.findAll({
         where: {
-          Id: id
+          Id: client_id
         }
       });
       res.json(data);
