@@ -1,0 +1,48 @@
+{{!--Container start--}}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 offset-md-1"><br>
+      <h3>All our Pets</h3>
+
+      {{!--Table start--}}
+      <table>
+        <div class="row">
+          <div class="col s12 m7">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/sample-1.jpg">
+                {{!--Fred = dummy value for pet_name--}}
+                <span class="card-title">Fred</span>
+              </div>
+              <div class="card-action">
+                {{!--Fred = dummy value for pet_name--}}
+                <button onclick="myFunction()">Sign in Fred for today</button>
+
+                <script>
+function myFunction() {
+  var prompt;
+  var password = prompt("Please enter your password:");
+  if (password == null || password == "") {
+    text = "User cancelled the prompt.";
+  } else {
+    target = "";
+  }
+  document.getElementById("demo").innerHTML = prompt;
+}
+              </script>
+              
+              </div>
+              <div class="card-action">
+                {{!--Fred = dummy value for pet_name--}}
+                <a href="/bill">Sign out Fred for today</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {{!--table end--}}
+      </table>
+
+      {{!--container end--}}
+    </div>
+  </div>
+</div>
