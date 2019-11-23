@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "petservices_db",
+    "password": "DIVAGIRL1020!",
+    "database": "primpnplay_db",
     "host": "localhost",
     "dialect": "mysql"
   },
