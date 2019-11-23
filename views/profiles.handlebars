@@ -1,9 +1,82 @@
+<!-- Navbar (only home) -->
+<nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="index.handlebars">Home</a></li>
+      </ul>
+    </div>
+  </nav>
+
+{{!-- Jumbotron with image and title? --}}
 <div id="home">
   <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
         <h1>{{msg}}</h1>
-        <h2>These are our clients</h2>
+        <h2>Primp & Play</h2>
+
+        {{!--Profile pictures with 2 buttons--}}
+        <article class="blog_card">
+                  <div class="blog_card_top">
+
+                    {{!--when clicking on profile pic - clients goes to singleprofile.handlebars--}}
+                    <a
+                      onclick="window.open('/singleprofile.handlebars')"
+                      title="Click for Profile-Informations"
+                    >
+                      <div class="project_box_one">
+                        <img
+                          class="pic2"
+                          src= {{}}
+                          alt="pro1"
+                        />
+                        <div class="product_info">
+                          <div class="product_info_text">
+                            <div class="product_info_text_inner">
+                              <i class="ion ion-plus"></i>
+                              <h4>Click for Profile-Informations</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+
+                  {{!--Button to go to newform.handlebars--}}
+                  <button id="link" onclick="window.open('/newform.handlebars')">
+                  Sign {{pet_name}} up for today!
+                  </button>
+
+                  {{!--Button to go to bill.handlebars--}}
+                  <button id="link" onclick="window.open('/bill.handlebars')">
+                  Sign {{pet_name}} out for today!
+                  </button>
+
+                  {{!--Insert Client name and pet name into the flag on corner of the profile pic--}}
+                    <div class="blog_date">
+                      {{pet_name}}
+                      <span>
+                        {{client_first}} {{client_last}}
+                      </span>
+                    </div>
+                  </div>
+                </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
             <label for="example-text">Example Text</label>
@@ -29,5 +102,34 @@
   </div>
 </div>
 
+<!-- Footer -->
+     <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2019 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+
+
+<!-- Javascript & jQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
