@@ -1,136 +1,151 @@
- {{!-- Name Input --}}
- <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s6">
-          <i class="material-icons prefix">account_circle</i>
-          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-          <label for="first_name">First Name</label>
-        </div>
-        <div class="input-field col s6">
-          <i class="material-icons prefix">account_circle</i>
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Last Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="pet_name" type="text" class="validate">
-          <label for="pet_name">Pet Name</label>
-        </div>
+{{!-- Name Input --}}
+<div class="row">
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">account_circle</i>
+        <input placeholder="" id="first_name" type="text" class="validate">
+        <label for="first_name">First Name</label>
       </div>
-
-      {{!-- Pet gender checkbox --}}
-      <form action="#">
-        <p>
-      <label>
-        <input type="checkbox" class="filled-in" checked="checked" />
-        <span>Male</span>
-      </label>
-    </p>
-    <p>
-      <label>
-        <input type="checkbox" class="filled-in" checked="checked" />
-        <span>Female</span>
-      </label>
-    </p>
-      </form>
-
-    {{!-- Pet Image   --}}
-     <form action="#">
-    <div class="file-field input-field">
-      <div class="btn">
-        <span>Pet Image File</span>
-        <input type="file">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">account_circle</i>
+        <input id="last_name" type="text" class="validate">
+        <label for="last_name">Last Name</label>
       </div>
-      <div class="file-path-wrapper">
-        <input class="file-path validate" type="text">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">pets</i>
+        <input id="pet_name" type="text" class="validate">
+        <label for="pet_name">Pet Name</label>
       </div>
-    </div>
   </form>
+</div>
+
+{{!-- Pet gender checkbox --}}
+<div class="row">
+  <div class="col s12">
+    <form action="#">
+      <p>
+        <label>
+          <input type="checkbox" />
+          <span>Male</span>
+        </label>
+      </p>
+      <p>
+        <label>
+          <input type="checkbox" />
+          <span>Female</span>
+        </label>
+      </p>
+    </form>
+  </div>
+</div>
+
+{{!-- Pet Image   --}}
+<form action="#">
+  <div class="file-field input-field">
+    <div class="btn">
+      <span>Attach Pet Image File</span>
+      <input type="file">
+    </div>
+    <div class="file-path-wrapper">
+      <input class="file-path validate" type="text">
+    </div>
+  </div>
+</form>
 
 {{!-- Email --}}
-  <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <i class="material-icons prefix">email</i>
-          <label for="email">Email</label>
-        </div>
-      </div>
+<div class="input-field col s12">
+  <i class="material-icons prefix">email</i>
+  <input id="email" type="email" class="validate">
+  <label for="email">Email</label>
+</div>
 
 {{!-- Phone Number --}}
-  <div class="input-field col s6">
-          <i class="material-icons prefix">phone</i>
-          <input id="icon_telephone" type="tel" class="validate">
-          <label for="icon_telephone">Phone Number</label>
-        </div>
+<div class="input-field col s12">
+  <i class="material-icons prefix">phone</i>
+  <input id="icon_telephone" type="tel" class="validate">
+  <label for="icon_telephone">Phone Number</label>
+</div>
 
 {{!-- Check-In Date --}}
-<input type="text" class="datepicker">
-
-
-<script>
-  $(document).ready(function(){
-    $('.datepicker').datepicker();
-  });
-</script>
+<div class="col s12">
+  <input type="date" class="datepicker">
+  <label for="Check-In Date">Check-In Date</label>
+</div>
 
 {{!-- Check-In Time --}}
-<input type="text" class="timepicker">
+<div class="col s12">
+  <input type="time" class="timepicker">
+  <label for="Check-In Time">Check-In Time</label>
+</div>
 
-<script>
-  $(document).ready(function(){
-    $('.timepicker').timepicker();
-  });
-</script>  
 {{!-- Check-Out Date--}}
-<input type="text" class="datepicker">
+<div class="col s12">
+  <input type="date" class="datepicker">
+  <label for="Check-Out Date">Check-Out Date</label>
+</div>
+
+{{!-- Check-Out Time --}}
+<div class="col s12">
+  <input type="time" class="timepicker">
+  <label for="Check-Out Time">Check-Out Time</label>
+</div>
 
 
-<script>
-  $(document).ready(function(){
-    $('.datepicker').datepicker();
-  });
-</script>
-
-{{!-- Check-In Time --}}
-<input type="text" class="timepicker">
-
-<script>
-  $(document).ready(function(){
-    $('.timepicker').timepicker();
-  });
-</script>  
-
-
-{{!-- Services --}}
+{{!-- Services Drop-Down --}}
+{{!-- <div class = "row"> 
+      <h3>Drop Down Demo</h3>
+      <ul id = "dropdown" class = "dropdown-content">
+         <li><a>Inbox<span class = "badge">12</span></a></li>
+         <li><a>Unread<span class = "new badge">4</span></a></li>
+         <li><a>Sent</a></li>
+         <li class = "divider"></li>
+         <li><a>Outbox<span class = "badge">14</span></a></li>
+      </ul>
+      
+      <a class = "btn dropdown-button" data-activates = "dropdown">Services
+         <i class = "mdi-navigation-arrow-drop-down right"></i></a>	 
+   </div>
 <div class="input-field col s12">
-    <select multiple>
-      <option value="" disabled selected>Choose your option</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
-    </select>
-    <label>Grooming Services</label>
-  </div>
+  <ul id = "dropdown" class = "dropdown-content">
+  <select multiple>
+    <option value="" disabled selected>Choose your option</option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+  </select>
+  </ul>
+  <a class = "btn dropdown-button" data-activates = "dropdown"> Grooming Services
+         <i class = "mdi-navigation-arrow-drop-down right"></i></a>	 
+</div>
 
-  <div class="input-field col s12">
-    <select multiple>
-      <option value="" disabled selected>Choose your option</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
-    </select>
-    <label>Boarding Services</label>
-  </div>
+<div class="input-field col s12">
+  <select multiple>
+    <option value="" disabled selected>Choose your option</option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+  </select>
+  <label>Boarding Services</label>
+</div>
 
-  <div class="input-field col s12">
-    <select multiple>
-      <option value="" disabled selected>Choose your option</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
-    </select>
-    <label>Daycare Services</label>
-  </div>
+<div class="input-field col s12">
+  <div class="row">
+  <select multiple>
+    <option value="" disabled selected>Choose your option</option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+  </select>
+  <label>Daycare Services</label>
+</div>
+</div> --}}
 
-
-
+{{!-- Submit button --}}
+<div class="button">
+  <div class="row">
+  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+</div>
+</div>
