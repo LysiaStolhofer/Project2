@@ -12,4 +12,20 @@ body {
 main {
   flex: 1 0 auto;
 }
-    
+
+* {
+  box-sizing: border-box;
+}
+
+.reihe {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}

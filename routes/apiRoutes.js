@@ -21,6 +21,24 @@ module.exports = function(app) {
     }
   });
 
+  // Create post route for authorization
+  app.post("/api/auth", async (req, res) => {
+    try {
+      const result = await db.Client.findAll({
+        where: {
+          clientLastname: req.body.name
+        }
+      });
+      if (req.body.password === result.password) {
+        res.send("ok");
+      } else {
+        res.send("no");
+      }
+    } catch (error) {
+      res.status(400).json({ error: { name: error.name, msg: error.message } });
+    }
+  });
+
   // Delete an example by id
   app.delete("/api/examples/:id", async (req, res) => {
     try {
