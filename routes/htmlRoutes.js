@@ -16,7 +16,6 @@ module.exports = function(app) {
     // Load form page
     app.get("/enroll", async (req, res) => {
       try {
-
         res.render("newform");
       } catch (error) {
         res

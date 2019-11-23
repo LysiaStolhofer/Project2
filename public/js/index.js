@@ -1,30 +1,37 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
-var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
+var $newMember = $("#newMember");
+var $memberLogin = $("#memberLogin");
+var $allProfiles = $("#submit");
+var $singleProfile = $("#example-list");
+var $bill = $("#example-list");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveExample: function(example) {
+  newProfile: function(profile) {
     return $.ajax({
       headers: {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/examples",
-      data: JSON.stringify(example)
+      url: "/api/profile",
+      data: JSON.stringify(profile)
     });
   },
-  getExamples: function() {
+  getAllProfiles: function() {
     return $.ajax({
-      url: "api/examples",
+      url: "/api/clients",
+      type: "GET"
+    });
+  },
+  getOneProfile: function(id) {
+    return $.ajax({
+      url: "/api/clients/:id",
       type: "GET"
     });
   },
   deleteExample: function(id) {
     return $.ajax({
-      url: "api/examples/" + id,
+      url: "/api/profile/" + id,
       type: "DELETE"
     });
   }
