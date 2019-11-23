@@ -16,6 +16,17 @@ module.exports = function(app) {
     }
   });
 
+  // Load form page
+  app.get("/enroll", async (req, res) => {
+    try {
+      res.render("newform");
+    } catch (error) {
+      res
+        .status(400)
+        .render("400", { error: { name: error.name, msg: error.message } });
+    }
+  });
+
   // Load example page and pass in an example by id
   app.get("/example/:id", async (req, res) => {
     try {
