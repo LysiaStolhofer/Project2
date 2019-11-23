@@ -11,17 +11,17 @@ module.exports = function(app) {
     }
   });
 
-    // Get all client profiles
-    app.get("/api/clients", async (req, res) => {
-      try {
-        const data = await db.Clients.findAll({});
-        res.json(data);
-      } catch (error) {
-        res.status(400).json({ error: { name: error.name, msg: error.message } });
-      }
-    });
+  // Get all client profiles
+  app.get("/api/clients", async (req, res) => {
+    try {
+      const data = await db.Clients.findAll({});
+      res.json(data);
+    } catch (error) {
+      res.status(400).json({ error: { name: error.name, msg: error.message } });
+    }
+  });
 
-      // Get Pet Profile
+  // Get Pet Profile
   app.get("/api/clients/:id", async (req, res) => {
     try {
       const data = await db.clients.findAll({

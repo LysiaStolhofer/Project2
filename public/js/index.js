@@ -1,9 +1,9 @@
-// Get references to page elements
-var $newMember = $("#newMember");
-var $memberLogin = $("#memberLogin");
-var $allProfiles = $("#submit");
-var $singleProfile = $("#example-list");
-var $bill = $("#example-list");
+// // Get references to page elements
+// var $newMember = $("#submitForm");
+// var $memberLogin = $("#memberLogin");
+// var $allProfiles = $("#submit");
+// var $singleProfile = $("#example-list");
+// var $bill = $("#example-list");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -23,7 +23,7 @@ var API = {
       type: "GET"
     });
   },
-  getOneProfile: function(id) {
+  getOneProfile: function() {
     return $.ajax({
       url: "/api/clients/:id",
       type: "GET"
