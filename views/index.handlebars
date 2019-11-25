@@ -15,43 +15,18 @@
   <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>Primp & Play</h2>
+        <img src="/public/images/Primp-play.png">
+        
+
+        
+
 
         {{!-- Buttons for new member and existing member --}}
-        <a class="waves-effect waves-light btn-large">New Member Sign-Up</a>
+        <a class="waves-effect waves-light btn-large" id="newMember">New Member Sign-Up</a>
 
-        <a class="waves-effect waves-light btn-large">Member Login</a>
+        <a class="waves-effect waves-light btn-large" id="memberLogin">Member Login</a>
 
-        {{!-- Form example
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
-              placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description"
-              placeholder="Enter Example Description"></textarea>
-          </div>
-          
-        </form> --}}
-
-        {{!-- <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
-  </div>
-</div> --}}
-
+        
 {{!-- About Us --}}
 <div id="about">
           </div>
@@ -62,8 +37,7 @@
             <div class="row">
               <div class="col l6 s12">
 
-                <i class="fas fa-bath"></i>
-
+              <i class="fas fa-bath"></i>
               </div>
             </div>
           </div>
@@ -72,21 +46,17 @@
         {{!-- Reviews Carousel --}}
         <div id ="reviews">
         </div>
-        <div class="testimonial_carousel mt50">
-          <div class="testimonial_box">
+        <div class="review1">
             <p>
               "Milo and Otis love staying at Primp & Play. My mind is at ease while I travel that they're having fun." 
             </p>
-            <br>
-            <div class="testimonial_author">
-              <img class="responsive-img" src="https://www.aspca.org/sites/default/files/cat-care_urine-marking_main-image.jpg" alt="author"/>
+              <img class="circle responsive-img" src="https://www.aspca.org/sites/default/files/cat-care_urine-marking_main-image.jpg" alt="author"/>
               <h5>Jack Smith</h5>
               <p>
                 Client since June 2018~ <span>Stamford, CT</span>
               </p>
             </div>
-          </div>
-          <!--repeat as often as many reviews you want in the carousel -->
+    
           <!--Example-->
           <div class="testimonial_carousel mt50">
             <div class="testimonial_box">
@@ -95,42 +65,13 @@
               </p>
               <br>
               <div class="testimonial_author">
-                <img class="responsive-img" src="https://secure.i.telegraph.co.uk/multimedia/archive/01597/missing-dog_1597174c.jpg" alt="author" />
+                <img class="circle responsive-img" src="https://secure.i.telegraph.co.uk/multimedia/archive/01597/missing-dog_1597174c.jpg" alt="author" />
                 <h5>Lindsay Mayer</h5>
                 <p>
                   Client since April 2013~ <span>New Haven, CT</span>
                 </p>
               </div>
             </div>
-
-
-            {{!-- Footer --}}
-            <footer class="page-footer">
-              <div class="container">
-                <div class="row">
-                  <div class="col l4 s12">
-                    <h5 class="white-text">Primp & Play</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer
-                      content.</p>
-                  </div>
-                  <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
-                    <ul>
-                      <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
-                      <li><a class="grey-text text-lighten-3" href="#!">Services</a></li>
-                      <li><a class="grey-text text-lighten-3" href="#!">Reviews</a></li>
-                      <li><a class="grey-text text-lighten-3" href="#!">Member Login</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="footer-copyright">
-                <div class="container">
-                  © 2019 Copyright
-                  
-                </div>
-              </div>
-            </footer>
 
             <!-- Javascript & jQuery -->
             <script type="text/javascript"
