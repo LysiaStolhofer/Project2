@@ -89,6 +89,29 @@ var handleFormSubmit = function(event) {
   $exampleDescription.val("");
 };
 
+const handleauth = async function(event) {
+  event.preventDefault();
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const res = await $.ajax({
+    headers: {
+      "Content-Type": "application/json"
+    },
+    type: "POST",
+    url: "/api/auth",
+    data: JSON.stringify({
+      email,
+      password
+    })
+  });
+  if (res === "ok") {
+    window.location.assign("/singleprofile");
+  } else {
+    window.location.assign("/singleprofile");
+  }
+  console.log(res);
+};
+
 // handleDeleteBtnClick is called when an example's delete button is clicked
 // Remove the example from the db and refresh the list
 var handleDeleteBtnClick = function() {
@@ -102,5 +125,5 @@ var handleDeleteBtnClick = function() {
 };
 
 // Add event listeners to the submit and delete buttons
-$submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);
+// $submitBtn.on("click", handleFormSubmit);
+// $exampleList.on("click", ".delete", handleDeleteBtnClick);

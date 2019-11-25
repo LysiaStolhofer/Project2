@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "Lysia14055!",
-    "database": "exampledb",
+    "database": "petservices_db",
     "host": "localhost",
     "dialect": "mysql"
   },

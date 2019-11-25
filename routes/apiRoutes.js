@@ -48,12 +48,13 @@ module.exports = function(app) {
   // Create post route for authorization
   app.post("/api/auth", async (req, res) => {
     try {
+      const { email, password } = req.body;
       const result = await db.Client.findAll({
         where: {
-          clientLastname: req.body.name
+          email
         }
       });
-      if (req.body.password === result.password) {
+      if (password === result.password) {
         res.send("ok");
       } else {
         res.send("no");
