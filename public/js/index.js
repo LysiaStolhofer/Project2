@@ -1,3 +1,5 @@
+//import { ConnectionError } from "sequelize/types";
+
 // // Get references to page elements
 // var $newMember = $("#submitForm");
 // var $memberLogin = $("#memberLogin");
@@ -58,6 +60,32 @@ $("#newMember").click(function() {
 function loadProfiles() {
   window.location.href = "/api/profiles";
 }
+
+connection.sync({ force: true }).then(function() {
+  var req = {
+    body: {
+      clientGender: $("#gender").val,
+      petName: $("petName").val,
+      clientLastname: $("#last_name").val,
+      clientFirstname: $("#first_name").val,
+      email: $("email").val,
+      phoneNumber: $("#phone").val,
+      password: $("#password").val,
+      petGender: $("#petGender").val,
+      services: $("#services").val,
+      species: $("#species").val,
+      weight: $("#weight".val),
+      petImage: $("petImage").val,
+      checkIndate: $("#checkin_date").val,
+      checkIntime: $("#checkin_time").val,
+      checkOutdate: $("#checkout_date").val,
+      checkOuttime: $("#checkout_time").val
+    }
+  };
+  client.create(req.body).then(function(newClient) {
+    console.log(newClient.datavalues);
+  });
+});
 
 // // Submit New Enrollment
 // var $submit = $("#submit");
