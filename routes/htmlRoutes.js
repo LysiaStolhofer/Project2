@@ -45,6 +45,27 @@ module.exports = function(app) {
     }
   });
 
+  app.get("/profile", async (req, res) => {
+    try {
+      res.render("profile");
+    } catch (error) {
+      res
+        .status(400)
+        .render("400", { error: { name: error.name, msg: error.message } });
+    }
+  });
+
+  app.get("/singleprofile", async (req, res) => {
+    try {
+      res.render("singleprofile");
+    } catch (error) {
+      res
+        .status(400)
+        .render("400", { error: { name: error.name, msg: error.message } });
+    }
+  });
+
+  // Load example page and pass in an example by id
   // Load Profile page and pass in a profile by id
   app.get("/client/:id", async (req, res) => {
     try {
