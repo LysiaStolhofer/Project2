@@ -2,10 +2,6 @@ language: node_js
 node_js: "lts/*"
 branches:
   only:
-  - master
-cache:
-  directories:
-    - node_modules
 services:
   - mysql
 before_install:
