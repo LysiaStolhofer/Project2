@@ -16,6 +16,7 @@
         <label for="last_name">Last Name</label>
       </div>
       <div class="input-field col s6">
+        <i class="material-icons prefix">lock</i>
         <input id="password" type="text" class="validate">
         <label for="password">Type in a password</label>
       </div>
@@ -24,14 +25,12 @@
         <input id="pet_name" type="text" class="validate">
         <label for="pet_name">Pet Name</label>
       </div>
-  </form>
 </div>
 
 {{!-- Pet gender checkbox --}}
 <div class="row">
   <div class="col s12">
     <h5>Pet Gender</h5>
-    <form action="#">
       <p>
         <label>
           <input id="pet_male" type="checkbox" />
@@ -44,14 +43,12 @@
           <span>Female</span>
         </label>
       </p>
-    </form>
   </div>
 </div>
 {{!-- Pet Type --}}
 <div class="row">
   <div class="col s12">
     <h5>Pet Type</h5>
-    <form action="#">
       <p>
         <label>
           <input id="dog" type="checkbox" />
@@ -76,13 +73,10 @@
           <span>Bunny</span>
         </label>
       </p>
-    </form>
   </div>
 </div>
 
-
 {{!-- Pet Image   --}}
-<form action="#">
   <div class="file-field input-field">
     <div class="btn">
       <span>Attach Pet Image File</span>
@@ -92,20 +86,19 @@
       <input class="file-path validate" type="text">
     </div>
   </div>
-</form>
 
 {{!-- Email --}}
 <div class="input-field col s12">
   <i class="material-icons prefix">email</i>
   <input id="email" type="email" class="validate">
-  <label for="email">Email</label>
+  <label for="clientEmail">Email</label>
 </div>
 
 {{!-- Phone Number --}}
 <div class="input-field col s12">
   <i class="material-icons prefix">phone</i>
-  <input id="phonenumber" type="tel" class="validate">
-  <label for="icon_telephone">Phone Number</label>
+  <input id="phoneNumber" type="tel" class="validate">
+  <label for="phone">Phone Number</label>
 </div>
 
 {{!-- Check-In Date --}}
@@ -187,4 +180,5 @@
 
 </div>
  </div>
+ </form>
     </body>
