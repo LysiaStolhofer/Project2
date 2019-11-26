@@ -12,7 +12,7 @@ module.exports = function(app) {
   });
 
   // Get all client profiles
-  app.get("/api/clients", async (req, res) => {
+  app.get("/api/profile", async (req, res) => {
     try {
       const data = await db.Clients.findAll({});
       res.json(data);
@@ -22,9 +22,9 @@ module.exports = function(app) {
   });
 
   // Get Pet Profile
-  app.get("/api/clients/:id", async (req, res) => {
+  app.get("/api/profile/:id", async (req, res) => {
     try {
-      const data = await db.clients.findAll({
+      const data = await db.Clients.findAll({
         where: {
           id: req.param.id
         }
