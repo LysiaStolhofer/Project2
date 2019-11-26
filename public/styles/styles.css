@@ -1,6 +1,26 @@
-.list-group-item {
-  line-height: 2.5;
+
+body {
+  margin: auto;
+  
 }
+.brand-logo {
+  font-family: 'Niconne', cursive;
+  font-size: 55px;
+  padding: 20px
+}
+
+#nav-mobile{
+  font-family: 'Niconne', cursive;
+  font-size: 55px;
+}
+
+/* Reviews */
+
+
+.card-content {
+  font-size: 20px;
+} 
+
 
 /* Sticky Footer */
 body {
