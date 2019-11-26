@@ -1,27 +1,28 @@
-
 body {
   background-color: #d9d9d9;
 }
+
 .brand-logo {
   font-family: 'Niconne', cursive;
   font-size: 55px;
   padding: 20px
 }
 
-#nav-mobile{
+#nav-mobile {
   font-family: 'Niconne', cursive;
-  font-size: 55px;
+  font-size: 75px;
 }
-
 
 .title {
   font-family: 'Niconne', cursive;
   font-size: 35px;
 }
+
 .boardingHeader {
   font-family: 'Niconne', cursive;
   font-size: 25px;
 }
+
 .p {
   font-size: 20px;
 }
@@ -30,7 +31,7 @@ body {
 
 .card-content {
   font-size: 20px;
-} 
+}
 
 
 /* Sticky Footer */
@@ -43,9 +44,8 @@ body {
 main {
   flex: 1 0 auto;
 }
-.white-text
-{
+
+.white-text {
   font-family: 'Niconne', cursive;
   font-size: 35px;
 }
-    
