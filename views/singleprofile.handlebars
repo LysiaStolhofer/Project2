@@ -6,21 +6,26 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-  {{!--FOR SELECT MATERIALIZE--}}
+  
   <script>
+    //for Select-materialize drop downs
     $(document).ready(function () {
       $('select').material_select();
     });
+
+    //for shadowing the unactive parts 
+    function myActive() {
+  var x = document.activeElement.tagName;
+  document.getElementById("demo").innerHTML = x;
+}
   </script>
 </head>
 
 {{!-----------------------------------------------CONTENT START-----------------------------------------------------}}
-
-{{!--SINGLE PROFILE PAGE FOR EACH PET SIGNED UP--}}
 <div class="row">
 
   {{!------------------------------------------CARD BOOK SERVICES START---------------------------------------------}}
-  <div class="column">
+  <div class="column" onclick="myActive()">
     <div class="overlay">
     <div class="card">
       <div class="card-content">
@@ -133,7 +138,7 @@
 
   {{!------------------------------------------CARD PROFILE START-----------------------------------------------}}
   <div class="column">
-    <div class="overlay">
+    <div class="overlay" onclick="myActive()">
     <div class="card">
       <div class="card-image">
         {{!--Picture = dummy example for pet_image--}}
@@ -233,7 +238,7 @@
 
   {{!-----------------------------------------CARD BILLING START----------------------------------------------}}
   <div class="column">
-    <div class="overlay">
+    <div class="overlay" onclick="myActive()">
     <div class="card">
       <div class="card-content">
         {{!--Fred = dummy value for pet_name--}}
