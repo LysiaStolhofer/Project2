@@ -1,7 +1,6 @@
 
 body {
-  margin: auto;
-  
+  background-color: #d9d9d9;
 }
 .brand-logo {
   font-family: 'Niconne', cursive;
@@ -14,8 +13,20 @@ body {
   font-size: 55px;
 }
 
-/* Reviews */
 
+.title {
+  font-family: 'Niconne', cursive;
+  font-size: 35px;
+}
+.boardingHeader {
+  font-family: 'Niconne', cursive;
+  font-size: 25px;
+}
+.p {
+  font-size: 20px;
+}
+
+/* Reviews */
 
 .card-content {
   font-size: 20px;
@@ -31,5 +42,10 @@ body {
 
 main {
   flex: 1 0 auto;
+}
+.white-text
+{
+  font-family: 'Niconne', cursive;
+  font-size: 35px;
 }
     
