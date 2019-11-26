@@ -21,6 +21,7 @@
 
   {{!------------------------------------------CARD BOOK SERVICES START---------------------------------------------}}
   <div class="column">
+    <div class="overlay">
     <div class="card">
       <div class="card-content">
         {{!--Fred = dummy value for pet_name--}}
@@ -126,11 +127,13 @@
         {{!--FOOTER END--}}
       </div>
     </div>
+    </div>
   </div>
   {{!----------------------------------------CARD BOOK SERVICES END---------------------------------------------}}
 
   {{!------------------------------------------CARD PROFILE START-----------------------------------------------}}
   <div class="column">
+    <div class="overlay">
     <div class="card">
       <div class="card-image">
         {{!--Picture = dummy example for pet_image--}}
@@ -224,11 +227,13 @@
         {{!--FOOTER END--}}
       </div>
     </div>
+    </div>
   </div>
   {{!------------------------------------------CARD PROFILE END-----------------------------------------------}}
 
   {{!-----------------------------------------CARD BILLING START----------------------------------------------}}
   <div class="column">
+    <div class="overlay">
     <div class="card">
       <div class="card-content">
         {{!--Fred = dummy value for pet_name--}}
@@ -401,6 +406,7 @@
       </div>
     </div>
   </div>
+  </div>
 {{!------------------------------------------CARD BILLING END--------------------------------------------------}}
 </div>
 {{!---------------------------------------------CONTENT END----------------------------------------------------}}
@@ -494,6 +500,10 @@
     content: "";
     display: table;
     clear: both;
+  }
+
+  .overlay{
+    opacity: .3; 
   }
 
   
