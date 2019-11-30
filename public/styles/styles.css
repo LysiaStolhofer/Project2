@@ -32,7 +32,11 @@ body {
 .card-content {
   font-size: 20px;
 }
-
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px 45px;
+}
 
 /* Sticky Footer */
 body {
@@ -49,3 +53,28 @@ main {
   font-family: 'Niconne', cursive;
   font-size: 35px;
 }
+.white-text
+{
+  font-family: 'Niconne', cursive;
+  font-size: 35px;
+}
+    
+
+* {
+  box-sizing: border-box;
+}
+
+.reihe {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+

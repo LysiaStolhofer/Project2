@@ -5,7 +5,7 @@ USE petservices_db;
 
 CREATE TABLE services (
 	item_id INTEGER(10) NOT NULL AUTO_INCREMENT,
-	  grooming VARCHAR(100) NOT NULL,
+	grooming VARCHAR(100) NOT NULL,
     daycare VARCHAR(100) NOT NULL,
     boarding VARCHAR(100) NOT NULL,
     price DECIMAL(10,2) NOT NULL,
