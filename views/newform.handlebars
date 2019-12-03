@@ -1,184 +1,181 @@
 {{!-- Name Input --}}
- <body>
-      <div class="container">
-        <h5>Pet Services Form</h5>
-<div class="row">
-  <form class="col s12">
-    <div class="row">
-      <div class="input-field col s6">
-        <i class="material-icons prefix">account_circle</i>
-        <input id="client_first_name" type="text" class="validate">
-        <label for="first_name">First Name</label>
+<div class="container">
+  <h5 class="teal white-text">Pet Services Form</h5>
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="client_first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="client_last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">lock</i>
+          <input id="password" type="text" class="validate">
+          <label for="password">Type in a password</label>
+        </div>
+        <div class="input-field col s6">
+          <i class="material-icons prefix">pets</i>
+          <input id="pet_name" type="text" class="validate">
+          <label for="pet_name">Pet Name</label>
+        </div>
       </div>
-      <div class="input-field col s6">
-        <i class="material-icons prefix">account_circle</i>
-        <input id="client_last_name" type="text" class="validate">
-        <label for="last_name">Last Name</label>
+
+      {{!-- Pet gender checkbox --}}
+      <div class="row">
+        <div class="col s12">
+          <h5>Pet Gender</h5>
+          <p>
+            <label>
+              <input id="pet_male" type="checkbox" />
+              <span>Male</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input id="pet_female" type="checkbox" />
+              <span>Female</span>
+            </label>
+          </p>
+        </div>
       </div>
-      <div class="input-field col s6">
-        <i class="material-icons prefix">lock</i>
-        <input id="password" type="text" class="validate">
-        <label for="password">Type in a password</label>
+      {{!-- Pet Type --}}
+      <div class="row">
+        <div class="col s12">
+          <h5>Pet Type</h5>
+          <p>
+            <label>
+              <input id="dog" type="checkbox" />
+              <span>Dog</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input id="cat" type="checkbox" />
+              <span>Cat</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input id="bird" type="checkbox" />
+              <span>Bird</span>
+            </label>
+          </p>
+          <p>
+            <label>
+              <input id="bunny" type="checkbox" />
+              <span>Bunny</span>
+            </label>
+          </p>
+        </div>
       </div>
-      <div class="input-field col s6">
-        <i class="material-icons prefix">pets</i>
-        <input id="pet_name" type="text" class="validate">
-        <label for="pet_name">Pet Name</label>
+
+      {{!-- Pet Image   --}}
+      <div class="file-field input-field">
+        <div class="btn">
+          <span>Attach Pet Image File</span>
+          <input id="pet_image" type="file">
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
       </div>
-</div>
 
-{{!-- Pet gender checkbox --}}
-<div class="row">
-  <div class="col s12">
-    <h5>Pet Gender</h5>
-      <p>
-        <label>
-          <input id="pet_male" type="checkbox" />
-          <span>Male</span>
-        </label>
-      </p>
-      <p>
-        <label>
-          <input id="pet_female" type="checkbox" />
-          <span>Female</span>
-        </label>
-      </p>
-  </div>
-</div>
-{{!-- Pet Type --}}
-<div class="row">
-  <div class="col s12">
-    <h5>Pet Type</h5>
-      <p>
-        <label>
-          <input id="dog" type="checkbox" />
-          <span>Dog</span>
-        </label>
-      </p>
-      <p>
-        <label>
-          <input id="cat" type="checkbox" />
-          <span>Cat</span>
-        </label>
-      </p>
-      <p>
-        <label>
-          <input id="bird" type="checkbox" />
-          <span>Bird</span>
-        </label>
-      </p>
-      <p>
-        <label>
-          <input id="bunny" type="checkbox" />
-          <span>Bunny</span>
-        </label>
-      </p>
-  </div>
-</div>
+      {{!-- Email --}}
+      <div class="input-field col s12">
+        <i class="material-icons prefix">email</i>
+        <input id="email" type="email" class="validate">
+        <label for="clientEmail">Email</label>
+      </div>
 
-{{!-- Pet Image   --}}
-  <div class="file-field input-field">
-    <div class="btn">
-      <span>Attach Pet Image File</span>
-      <input id="pet_image" type="file">
-    </div>
-    <div class="file-path-wrapper">
-      <input class="file-path validate" type="text">
-    </div>
-  </div>
+      {{!-- Phone Number --}}
+      <div class="input-field col s12">
+        <i class="material-icons prefix">phone</i>
+        <input id="phoneNumber" type="tel" class="validate">
+        <label for="phone">Phone Number</label>
+      </div>
 
-{{!-- Email --}}
-<div class="input-field col s12">
-  <i class="material-icons prefix">email</i>
-  <input id="email" type="email" class="validate">
-  <label for="clientEmail">Email</label>
-</div>
+      {{!-- Check-In Date --}}
+      <div class="col s12">
+        <h5>Check-In</h5>
+        <input id="checkin_date" type="date" class="datepicker">
+        <label for="Check-In Date">Check-In Date</label>
+      </div>
 
-{{!-- Phone Number --}}
-<div class="input-field col s12">
-  <i class="material-icons prefix">phone</i>
-  <input id="phoneNumber" type="tel" class="validate">
-  <label for="phone">Phone Number</label>
-</div>
+      {{!-- Check-In Time --}}
+      <div class="col s12">
+        <input id="checkin_time" type="time" class="timepicker">
+        <label for="Check-In Time">Check-In Time</label>
+      </div>
 
-{{!-- Check-In Date --}}
-<div class="col s12">
-  <h5>Check-In</h5>
-  <input id="checkin_date" type="date" class="datepicker">
-  <label for="Check-In Date">Check-In Date</label>
-</div>
+      {{!-- Check-Out Date--}}
+      <div class="col s12">
+        <h5>Check-Out</h5>
+        <input id="checkout_date" type="date" class="datepicker">
+        <label for="Check-Out Date">Check-Out Date</label>
+      </div>
 
-{{!-- Check-In Time --}}
-<div class="col s12">
-  <input id="checkin_time" type="time" class="timepicker">
-  <label for="Check-In Time">Check-In Time</label>
-</div>
-
-{{!-- Check-Out Date--}}
-<div class="col s12">
-  <h5>Check-Out</h5>
-  <input id="checkout_date" type="date" class="datepicker">
-  <label for="Check-Out Date">Check-Out Date</label>
-</div>
-
-{{!-- Check-Out Time --}}
-<div class="col s12">
-  <input id="checkout_time" type="time" class="timepicker">
-  <label for="Check-Out Time">Check-Out Time</label>
-</div>
+      {{!-- Check-Out Time --}}
+      <div class="col s12">
+        <input id="checkout_time" type="time" class="timepicker">
+        <label for="Check-Out Time">Check-Out Time</label>
+        <br>
+      </div>
 
 
-{{!-- Services Drop-Down --}}
+      {{!-- Services Drop-Down --}}
 
-{{!-- Grooming Services --}}
-<div class="row">
-  <h5>Pet Services</h5>
-  <ul id="grooming" class="dropdown-content">
-    <li><a>Shampoo & Brush<span id="shampooBrush" class="badge">$20</span></a></li>
-    <li><a>Shampoo, Brush & Haircut<span id="bathBrushHaircut" class="badge">$40</span></a></li>
-    <li><a>Nailtrim<span id="nailtrim" class="badge">$12</span></a></li>
-    <li class="divider"></li>
-  </ul>
+      {{!-- Grooming Services --}}
+      <div class="row">
+        <h5>Pet Services</h5>
+        <br>
+        <ul id="grooming" class="dropdown-content">
+          <li><a>Shampoo & Brush<span id="shampooBrush" class="badge">$20</span></a></li>
+          <li><a>Shampoo, Brush & Haircut<span id="bathBrushHaircut" class="badge">$40</span></a></li>
+          <li><a>Nailtrim<span id="nailtrim" class="badge">$12</span></a></li>
+          <li class="divider"></li>
+        </ul>
 
-  <a class="btn dropdown-button" id="grooming" data-activates="grooming">Grooming Services
-    <i class="mdi-navigation-arrow-drop-down right"></i></a>
-</div>
+        <a class="btn-large dropdown-button" id="grooming" data-activates="grooming">Grooming Services
+          <i class="mdi-navigation-arrow-drop-down right"></i></a>
+      </div>
 
-{{!-- Playcare Services --}}
-<div class="row">
-  <ul id="playCare" class="dropdown-content">
-    <li><a>Half Day<span id="halfDay" class="badge">$18</span></a></li>
-    <li><a>Full Day<span id="fullDay" class="badge">$24</span></a></li>
-    <li class="divider"></li>
-  </ul>
+      {{!-- Playcare Services --}}
+      <div class="row">
+        <ul id="playCare" class="dropdown-content">
+          <li><a>Half Day<span id="halfDay" class="badge">$18</span></a></li>
+          <li><a>Full Day<span id="fullDay" class="badge">$24</span></a></li>
+          <li class="divider"></li>
+        </ul>
 
-  <a class="btn dropdown-button" id="playCare" data-activates="playCare">Playcare Services
-    <i class="mdi-navigation-arrow-drop-down right"></i></a>
-</div>
+        <a class="btn-large dropdown-button" id="playCare" data-activates="playCare">Playcare Services
+          <i class="mdi-navigation-arrow-drop-down right"></i></a>
+      </div>
 
-{{!-- Boarding Services --}}
-<div class="row">
-  <ul id="boarding" class="dropdown-content">
-    <li><a>Standard Dog Suite<span id="standardSuite" class="badge">$50</span></a></li>
-    <li><a>Luxury Dog Suite<span id="luxurySuite" class="badge">$75</span></a></li>
-    <li><a>Cat Condo<span id="catCondo" class="badge">$25</span></a></li>
-    <li><a>Bird Suite<span id="birdSuite" class="badge">$18</span></a></li>
-    <li><a>Bunny Suite<span id="bunnySuite" class="badge">$15</span></a></li>
-    <li class="divider"></li>
-  </ul>
+      {{!-- Boarding Services --}}
+      <div class="row">
+        <ul id="boarding" class="dropdown-content">
+          <li><a>Standard Dog Suite<span id="standardSuite" class="badge">$50</span></a></li>
+          <li><a>Luxury Dog Suite<span id="luxurySuite" class="badge">$75</span></a></li>
+          <li><a>Cat Condo<span id="catCondo" class="badge">$25</span></a></li>
+          <li><a>Bird Suite<span id="birdSuite" class="badge">$18</span></a></li>
+          <li><a>Bunny Suite<span id="bunnySuite" class="badge">$15</span></a></li>
+          <li class="divider"></li>
+        </ul>
 
-  <a class="btn dropdown-button" id="boarding" data-activates="boarding">Boarding Services
-    <i class="mdi-navigation-arrow-drop-down right"></i></a>
-</div>
-{{!-- Submit button --}}
-<div class="button">
-  <div class="row">
-
-  <button id="submit" class="btn waves-effect waves-light" type="submit" name="action">Submit
-    <i class="material-icons right">send</i>
-  </button>
-
-</div>
- </div>
- </form>
-    </body>
+        <a class="btn-large dropdown-button" id="boarding" data-activates="boarding">Boarding Services
+          <i class="mdi-navigation-arrow-drop-down right"></i></a>
+      </div>
+      <br>
+      {{!-- Submit button --}}
+      <div class="button">
+        <div class="row center">
+          <button id="submit" class="btn-large center waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">send</i>
+          </button>
+      </div>
+    </form>
