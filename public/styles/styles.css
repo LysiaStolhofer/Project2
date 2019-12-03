@@ -1,6 +1,37 @@
-.list-group-item {
-  line-height: 2.5;
+
+body {
+  background-color: #d9d9d9;
 }
+.brand-logo {
+  font-family: 'Niconne', cursive;
+  font-size: 55px;
+  padding: 20px
+}
+
+#nav-mobile{
+  font-family: 'Niconne', cursive;
+  font-size: 55px;
+}
+
+
+.title {
+  font-family: 'Niconne', cursive;
+  font-size: 35px;
+}
+.boardingHeader {
+  font-family: 'Niconne', cursive;
+  font-size: 25px;
+}
+.p {
+  font-size: 20px;
+}
+
+/* Reviews */
+
+.card-content {
+  font-size: 20px;
+} 
+
 
 /* Sticky Footer */
 body {
@@ -12,6 +43,13 @@ body {
 main {
   flex: 1 0 auto;
 }
+
+.white-text
+{
+  font-family: 'Niconne', cursive;
+  font-size: 35px;
+}
+    
 
 * {
   box-sizing: border-box;
@@ -29,4 +67,5 @@ main {
   clear: both;
   display: table;
 }
+
 
