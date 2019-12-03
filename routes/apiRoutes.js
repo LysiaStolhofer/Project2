@@ -45,6 +45,25 @@ module.exports = function(app) {
     }
   });
 
+  // Create post route for authorization
+  app.post("/api/auth", async (req, res) => {
+    try {
+      const { email, password } = req.body;
+      const result = await db.Client.findAll({
+        where: {
+          email
+        }
+      });
+      if (password === result.password) {
+        res.send("ok");
+      } else {
+        res.send("no");
+      }
+    } catch (error) {
+      res.status(400).json({ error: { name: error.name, msg: error.message } });
+    }
+  });
+
   // Delete an Profile by id
   app.delete("/api/profile/:id", async (req, res) => {
     try {

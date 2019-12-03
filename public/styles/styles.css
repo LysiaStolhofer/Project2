@@ -1,15 +1,65 @@
-.list-group-item {
-  line-height: 2.5;
+body {
+  background-color: #D9D9D9;
 }
-
+.brand-logo {
+  font-family: 'Niconne', cursive;
+  font-size: 55px;
+  padding: 20px
+}
+#nav-mobile {
+  font-family: 'Niconne', cursive;
+  font-size: 75px;
+}
+.title {
+  font-family: 'Niconne', cursive;
+  font-size: 35px;
+}
+.boardingHeader {
+  font-family: 'Niconne', cursive;
+  font-size: 25px;
+}
+.p {
+  font-size: 20px;
+}
+/* Reviews */
+.card-content {
+  font-size: 20px;
+}
 /* Sticky Footer */
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
-
 main {
   flex: 1 0 auto;
 }
-    
+.white-text {
+  font-family: 'Niconne', cursive;
+  font-size: 35px;
+}
+.white-text
+{
+  font-family: 'Niconne', cursive;
+  font-size: 35px;
+}
+* {
+  box-sizing: border-box;
+}
+.reihe {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}

@@ -1,0 +1,822 @@
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>The Materialize Selects Example</title>
+  <meta name="viewport" content="width = device-width, initial-scale = 1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+  
+  <script>
+    //for Select-materialize drop downs
+    $(document).ready(function () {
+      $('select').material_select();
+    });
+
+    //for shadowing the unactive parts 
+    function myActive() {
+  var x = document.activeElement.tagName;
+  document.getElementById("demo").innerHTML = x;
+}
+  </script>
+</head>
+
+{{!-----------------------------------------------CONTENT START-----------------------------------------------------}}
+<div class="row">
+
+  {{!------------------------------------------CARD BOOK SERVICES START---------------------------------------------}}
+  <div class="column" onclick="myActive()">
+    <div class="overlay">
+    <div class="card">
+      <div class="card-content">
+        {{!--Fred = dummy value for pet_name--}}
+        <h3>FRED</h3>
+        {{!--Male = dummy value for pet_gender--}}
+        <h4>Male</h4>
+        </br>
+        <hr>
+
+        {{!-- CHECK-IN | CHECK-OUT--}}
+        <h5 id="smaller"><i class="inline-icon1 material-icons">event_note</i>Check-In | Check-Out</h5>
+
+        {{!--COLLAPSIBLE CHECK-IN START --}}
+        <button type="button" class="collapsible"><i class="inline-icon material-icons">event_available</i>
+          Check-In</button>
+        <div class="content">
+          {{!-- Check-In Date --}}
+          <div class="col s12">
+            <input type="date" class="datepicker">
+            <label for="Check-In Date">Check-In Date</label>
+          </div>
+          {{!-- Check-In Time --}}
+          <div class="col s12">
+            <input type="time" class="timepicker">
+            <label for="Check-In Time">Check-In Time</label>
+          </div>
+        </div>
+        {{!--COLLAPSIBLE CHECK-IN END --}}
+
+        {{!--COLLAPSIBLE CHECK-OUT START--}}
+        <button type="button" class="collapsible"><i class="inline-icon material-icons">event_busy</i>
+          Check-Out</button>
+        <div class="content">
+          {{!-- Check-Out Date--}}
+          <div class="col s12">
+            <input type="date" class="datepicker">
+            <label for="Check-Out Date">Check-Out Date</label>
+          </div>
+          {{!-- Check-Out Time --}}
+          <div class="col s12">
+            <input type="time" class="timepicker">
+            <label for="Check-Out Time">Check-Out Time</label>
+          </div>
+        </div>
+        {{!--COLLAPSIBLE CHECK-OUT END --}}
+        </br>
+        <hr>
+        {{!--SERVICE SELECT DROPDOWNS START--}}
+        <h5 id="smaller"><i class="inline-icon1 material-icons">spa</i> Services</h5>
+
+        {{!--GROOMING SELECT MULTIPLE--}}
+        <div id="padding2" class="row">
+          <select multiple>
+            <option value="" disabled selected>Grooming</option>
+            <option value="1">Nail Trim</option>
+            <option value="2">Shampoo & Brush</option>
+            <option value="3">Hair Cut</option>
+          </select>
+        </div>
+        {{!--DAY-CARE SELECT ONE--}}
+        <div class="row">
+          <select>
+            <option value="" disabled selected>Day-Care</option>
+            <option value="1">Full-Day</option>
+            <option value="2">Half-Day</option>
+          </select>
+        </div>
+        {{!--BOARDING SELECT ONE--}}
+        <div class="row">
+          <select>
+            <option value="" disabled selected>Boarding</option>
+            <option value="1">Standard Suite</option>
+            <option value="2">Luxury Suite</option>
+          </select>
+        </div>
+
+        {{!--SUBMIT BUTTON START--}}
+        <div class="row">
+          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <i class="material-icons right">spa</i>
+          </button>
+        </div>
+
+        {{!--SUBMIT BUTTON END--}}
+
+        {{!--FOOTER START--}}
+        <div class="card-footer">
+          <ul id="knopf">
+            <li>
+              <a><i class="inline-icon material-icons">account_circle</i> Primp&Play</a>
+            </li>
+            <li>
+              {{!-- mailto:email...com = dummy value for email/ mailto: needs to stay so email is able to connect to user email provider instantly--}}
+              <a href="mailto:Email@email.com"><i class="inline-icon material-icons">email</i> Email@email.com</a>
+            </li>
+            <li>
+              {{!-- tel:+1-203-444-555 = dummy value for phonenumber/ tel: needs to stay so number is able to connect call instantly--}}
+              <a href="tel:+1-203-444-555"><i class="inline-icon material-icons" width="14"
+                  height="15">phone</i>+1-203-444-555</a>
+            </li>
+          </ul>
+        </div>
+        {{!--FOOTER END--}}
+      </div>
+    </div>
+    </div>
+  </div>
+  {{!----------------------------------------CARD BOOK SERVICES END---------------------------------------------}}
+
+  {{!------------------------------------------CARD PROFILE START-----------------------------------------------}}
+  <div class="column">
+    <div class="overlay" onclick="myActive()">
+    <div class="card">
+      <div class="card-image">
+        {{!--Picture = dummy example for pet_image--}}
+        <img src="https://s-media-cache-ak0.pinimg.com/originals/3b/f0/77/3bf0775b0d234545d14a5941be966ab2.jpg" />
+        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">pets</i></a>
+      </div>
+      <div class="card-content">
+        {{!--Fred = dummy value for pet_name--}}
+        <h3>FRED</h3>
+        {{!--Male = dummy value for pet_gender--}}
+        <h4>Male</h4>
+        </br>
+        <hr>
+        <div id="padding2"></div>
+        {{!--COLLAPSIBLE START--}}
+        <button type="button" class="collapsible"><i class="inline-icon material-icons">event_note</i> Services
+          Booked</button>
+        <div class="content">
+          {{!--Fred = pet_name | Examples = services --}}
+          <p>Fred's Services for today are:
+            </br>
+            {{!--table to display booked services for pet--}}
+            <table>
+              <thead>
+                <tr>
+                  <th>Grooming</th>
+                  <th>Day-Care</th>
+                  <th>Boarding</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  {{!--Examples = dummy value fot services the client chooses--}}
+                  <td class="size">Nail-trim</td>
+                  <td class="size">Full Day</td>
+                  <td class="size">Luxury Suite</td>
+                </tr>
+                <tr>
+                  {{!--Examples = dummy value fot services the client chooses--}}
+                  <td class="size">Shampoo Bath</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+        </br>
+        <button type="button" class="collapsible"><i class="inline-icon material-icons">event_available</i> Check-In
+          Time</button>
+        <div class="content">
+          {{!--Fred = dummy value for pet_name | displayed date = dummy value for check_in_date | displayed time = dummy value for check_in_time--}}
+          <p>Fred checked in on:
+            </br>
+            11/11/2019 at 11:00 AM</p>
+        </div>
+        </br>
+        <button type="button" class="collapsible"><i class="inline-icon material-icons">event_busy</i> Check-Out
+          Time</button>
+        <div class="content">
+          {{!--Fred = dummy value for pet_name | displayed date = dummy value for check_out_date | displayed time = dummy value for check_out_time--}}
+          <p>Fred will check out on:
+            </br>
+            13/11/2019 at 09:00 AM</p>
+        </div>
+        <div class="button">
+          <div class="row1">
+            <button class="btn waves-effect waves-light" type="submit" name="action">Check-Out
+              <i class="material-icons right">pets</i>
+            </button>
+          </div>
+        </div>
+        {{!--COLLAPSIBLE END--}}
+
+        {{!--FOOTER START--}}
+        <div class="card-footer">
+          <ul id="knopf">
+            <li>
+              <a><i class="inline-icon material-icons">account_circle</i> Primp&Play</a>
+            </li>
+            <li>
+              {{!-- mailto:email...com = dummy value for email/ mailto: needs to stay so email is able to connect to user email provider instantly--}}
+              <a href="mailto:Email@email.com"><i class="inline-icon material-icons">email</i> Email@email.com</a>
+            </li>
+            <li>
+              {{!-- tel:+1-203-444-555 = dummy value for phonenumber/ tel: needs to stay so number is able to connect call instantly--}}
+              <a href="tel:+1-203-444-555"><i class="inline-icon material-icons" width="14"
+                  height="15">phone</i>+1-203-444-555</a>
+            </li>
+          </ul>
+        </div>
+        {{!--FOOTER END--}}
+      </div>
+    </div>
+    </div>
+  </div>
+  {{!------------------------------------------CARD PROFILE END-----------------------------------------------}}
+
+  {{!-----------------------------------------CARD BILLING START----------------------------------------------}}
+  <div class="column">
+    <div class="overlay" onclick="myActive()">
+    <div class="card">
+      <div class="card-content">
+        {{!--Fred = dummy value for pet_name--}}
+        <h3>FRED</h3>
+        {{!--Male = dummy value for pet_gender--}}
+        <h4>Male</h4>
+        </br>
+        <hr>
+        {{!-- SERVICES USED START --}}
+        <h5 id="smaller" class="padding"><i class="inline-icon1 material-icons">attach_money</i>Prices</h5>
+
+        {{!--PRICE TABLE FOR SERVICES START--}}
+        <table>
+          <thead>
+            <tr>
+              <th>Grooming</th>
+              <th>Day-Care</th>
+              <th>Boarding</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="size">Nail-trim | 25$</td>
+              <td class="size">Full Day | 55$</td>
+              <td class="size">Standard Suite | 90$</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="size">Shampoo | 50$</td>
+              <td class="size">Half Day | 30$</td>
+              <td class="size">Luxury Suite | 120$</td>
+            </tr>
+            <tr>
+              <td class="size">Brush & Clean | 22$</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+        {{!--PRICE TABLE FOR SERVICES END--}}
+        </br>
+
+        <button type="button" class="collapsible"><i class="inline-icon material-icons">spa</i> Services
+          Used</button>
+        <div class="content">
+          {{!--Fred = pet_name | Examples = services --}}
+          <p>Fred's Services for today were:
+            </br>
+            {{!--table to display booked services for pet--}}
+            <table>
+              <thead>
+                <tr>
+                  <th>Grooming:</th>
+                  <th>Day-Care:</th>
+                  <th>Boarding:</th>
+                  <th>Cost:</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  {{!--Examples = dummy value fot services the client chooses--}}
+                  <td class="size">Nail-trim</td>
+                  <td class="size">Full Day</td>
+                  <td class="size">Luxury Suite</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  {{!--Examples = dummy value fot services the client chooses--}}
+                  <td class="size">Shampoo Bath</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+        {{!--SERVICES USED END--}}
+
+        {{!--CREDIT CARD FORM START--}}
+        <button type="button" class="collapsible"><i class="inline-icon material-icons">credit_card</i>
+          Credit-Card Information</button>
+        <div class="content">
+          <div class="panel panel-default credit-card-box">
+            <div class="panel-heading display-table">
+              <div class="row display-tr">
+                <h5 id="smaller" class="panel-title display-td">Payment Details</h5>
+                <div class="display-td">
+                  <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                </div>
+              </div>
+            </div>
+            <div class="panel-body">
+              <form role="form" id="payment-form">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      </br>
+                      <label for="cardNumber">CARD NUMBER</label>
+                      <div class="input-group">
+                        <input id="form-control" type="tel" class="form-control" name="cardNumber"
+                          placeholder="Valid Card Number" autocomplete="cc-number" required autofocus />
+                        <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-7 col-md-7">
+                    <div class="form-group">
+                      <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span
+                          class="visible-xs-inline">EXP</span> DATE</label>
+                      <input id="form-control" type="tel" class="form-control" name="cardExpiry" placeholder="MM / YY"
+                        autocomplete="cc-exp" required />
+                    </div>
+                  </div>
+                  <div class="col-xs-5 col-md-5 pull-right">
+                    <div class="form-group">
+                      <label for="cardCVC">CV CODE</label>
+                      <input id="form-control" type="tel" class="form-control" name="cardCVC" placeholder="CVC"
+                        autocomplete="cc-csc" required />
+                    </div>
+                  </div>
+                </div>
+
+                {{!--SAVE INFORMATION BUTTON START--}}
+                <div class="button">
+                  <div class="row">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Save Informations
+                      <i class="material-icons right">credit_card</i>
+                    </button>
+                  </div>
+                </div>
+                {{!--SAVE INFORMATION BUTTON END--}}
+
+                <div class="row" style="display:none;">
+                  <div class="col-xs-12">
+                    <p class="payment-errors"></p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        {{!-- CREDIT CARD FORM END--}}
+        </br>
+        </br>
+        <div class="row">
+          <button class="btn waves-effect waves-light" type="submit" name="action">Pay Bill
+            <i class="material-icons right">attach_money</i>
+          </button>
+        </div>
+        {{!--FOOTER START--}}
+        <div class="card-footer">
+          <ul id="knopf">
+            <li>
+              <a><i class="inline-icon material-icons">account_circle</i> Primp&Play</a>
+            </li>
+            <li>
+              {{!-- mailto:email...com = dummy value for email/ mailto: needs to stay so email is able to connect to user email provider instantly--}}
+              <a href="mailto:Email@email.com"><i class="inline-icon material-icons">email</i> Email@email.com</a>
+            </li>
+            <li>
+              {{!-- tel:+1-203-444-555 = dummy value for phonenumber/ tel: needs to stay so number is able to connect call instantly--}}
+              <a href="tel:+1-203-444-555"><i class="inline-icon material-icons" width="14"
+                  height="15">phone</i>+1-203-444-555</a>
+            </li>
+          </ul>
+        </div>
+        {{!--FOOTER END--}}
+      </div>
+    </div>
+  </div>
+  </div>
+{{!------------------------------------------CARD BILLING END--------------------------------------------------}}
+</div>
+{{!---------------------------------------------CONTENT END----------------------------------------------------}}
+
+{{!--CSS FOR SINGLEPROFILE.HANDLEBARS--}}
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  /* CSS for Credit Card Payment form */
+  .credit-card-box .panel-title {
+    display: inline;
+  }
+
+  .credit-card-box .form-control.error {
+    border-color: red;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+  }
+
+  #form-control {
+    font-size: 12px;
+  }
+
+  .credit-card-box label.error {
+    font-weight: bold;
+    color: red;
+    padding: 2px 8px;
+    margin-top: 2px;
+  }
+
+  .credit-card-box .payment-errors {
+    font-weight: bold;
+    color: red;
+    padding: 2px 8px;
+    margin-top: 2px;
+  }
+
+  .credit-card-box label {
+    display: block;
+  }
+
+  /* The old "center div vertically" hack */
+  .credit-card-box .display-table {
+    display: table;
+  }
+
+  .credit-card-box .display-tr {
+    display: table-row;
+  }
+
+  .credit-card-box .display-td {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+  }
+
+  /* Just looks nicer */
+  .credit-card-box .panel-heading img {
+    min-width: 180px;
+  }
+
+  .padding {
+    padding-top: 14px;
+  }
+
+  #padding {
+    padding-top: 15px;
+  }
+
+  #padding2 {
+    padding-top: 8px;
+  }
+
+  #smaller {
+    font-size: 19px;
+  }
+
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 300px;
+    /* Should be removed. Only for demonstration */
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  
+
+  @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans);
+
+  body {
+    background-color: lightsteelblue;
+  }
+
+  .inline-icon {
+    vertical-align: bottom;
+    font-size: 20px !important;
+  }
+
+  .select-dropdown {
+    font-size: 12px;
+  }
+
+  .inline-icon1 {
+    vertical-align: bottom;
+    font-size: 23px !important;
+  }
+
+  .size {
+    font-size: 12px;
+  }
+
+  .btn,
+  .btn-large,
+  .btn-small {
+    text-decoration: none;
+    color: #fff;
+    background-color: lightsalmon;
+    text-align: center;
+    letter-spacing: .5px
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .row1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .card {
+    background-color: rgb(250, 216, 216);
+    margin: 10px auto;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.7);
+  }
+
+  .line {
+    color: lightsalmon;
+  }
+
+  .card-header {
+    overflow: hidden;
+    width: 100%;
+    max-height: 300px;
+  }
+
+  .card-header img {
+    width: 100%;
+  }
+
+  .card-content {
+    width: 90%;
+    margin: 0 20px 0 20px;
+    max-height: fit-content;
+    margin-bottom: 0;
+    padding: 0 10px;
+  }
+
+  .card-content h3 {
+    font-size: 25px;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: Black;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .card-image {
+    object-fit: cover;
+  }
+
+  .card-image2 {
+    background-color: rgb(250, 216, 216);
+  }
+
+  .card-content h4 {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: -10px;
+    color: lightcoral;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .card-content p {
+    color: black;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+
+  }
+
+  .card-footer {
+    border-top: solid 1px #B6B6B6;
+    padding: 3px 5px 5px 5px;
+  }
+
+  .card-footer ul {
+    padding: 0;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .card-footer ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 5px;
+    vertical-align: baseline;
+    font-size: 10px;
+  }
+
+  .card-footer ul li i {
+    color: lightcoral;
+  }
+
+  .collapsible {
+    background-color: lightcoral;
+    color: black;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    vertical-align: -webkit-baseline-middle;
+  }
+
+  th {
+    font-size: 12px;
+  }
+
+  .active,
+  .collapsible:hover {
+    background-color: ;
+  }
+
+  .content {
+    padding: 10px 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border: solid .2px lightcoral;
+
+  }
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+</style>
+
+{{!--JAVASCRIPT FOR COLLAPSIBLES | PAYMENT METHOD--}}
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+  $(document).ready(function () {
+    $('select').material_select();
+  });
+
+  var $form = $('#payment-form');
+  $form.on('submit', payWithStripe);
+
+  /* If you're using Stripe for payments */
+  function payWithStripe(e) {
+    e.preventDefault();
+
+    /* Visual feedback */
+    $form.find('[type=submit]').html('Validating <i class="fa fa-spinner fa-pulse"></i>');
+
+    var PublishableKey = 'pk_test_b1qXXwATmiaA1VDJ1mOVVO1p'; // Replace with your API publishable key
+    Stripe.setPublishableKey(PublishableKey);
+
+    /* Create token */
+    var expiry = $form.find('[name=cardExpiry]').payment('cardExpiryVal');
+    var ccData = {
+      number: $form.find('[name=cardNumber]').val().replace(/\s/g, ''),
+      cvc: $form.find('[name=cardCVC]').val(),
+      exp_month: expiry.month,
+      exp_year: expiry.year
+    };
+
+    Stripe.card.createToken(ccData, function stripeResponseHandler(status, response) {
+      if (response.error) {
+        /* Visual feedback */
+        $form.find('[type=submit]').html('Try again');
+        /* Show Stripe errors on the form */
+        $form.find('.payment-errors').text(response.error.message);
+        $form.find('.payment-errors').closest('.row').show();
+      } else {
+        /* Visual feedback */
+        $form.find('[type=submit]').html('Processing <i class="fa fa-spinner fa-pulse"></i>');
+        /* Hide Stripe errors on the form */
+        $form.find('.payment-errors').closest('.row').hide();
+        $form.find('.payment-errors').text("");
+        // response contains id and card, which contains additional card details            
+        console.log(response.id);
+        console.log(response.card);
+        var token = response.id;
+        // AJAX - you would send 'token' to your server here.
+        $.post('/account/stripe_card_token', {
+          token: token
+        })
+          // Assign handlers immediately after making the request,
+          .done(function (data, textStatus, jqXHR) {
+            $form.find('[type=submit]').html('Payment successful <i class="fa fa-check"></i>').prop('disabled', true);
+          })
+          .fail(function (jqXHR, textStatus, errorThrown) {
+            $form.find('[type=submit]').html('There was a problem').removeClass('success').addClass('error');
+            /* Show Stripe errors on the form */
+            $form.find('.payment-errors').text('Try refreshing the page and trying again.');
+            $form.find('.payment-errors').closest('.row').show();
+          });
+      }
+    });
+  }
+  /* Fancy restrictive input formatting via jQuery.payment library*/
+  $('input[name=cardNumber]').payment('formatCardNumber');
+  $('input[name=cardCVC]').payment('formatCardCVC');
+  $('input[name=cardExpiry').payment('formatCardExpiry');
+
+  /* Form validation using Stripe client-side validation helpers */
+  jQuery.validator.addMethod("cardNumber", function (value, element) {
+    return this.optional(element) || Stripe.card.validateCardNumber(value);
+  }, "Please specify a valid credit card number.");
+
+  jQuery.validator.addMethod("cardExpiry", function (value, element) {
+    /* Parsing month/year uses jQuery.payment library */
+    value = $.payment.cardExpiryVal(value);
+    return this.optional(element) || Stripe.card.validateExpiry(value.month, value.year);
+  }, "Invalid expiration date.");
+
+  jQuery.validator.addMethod("cardCVC", function (value, element) {
+    return this.optional(element) || Stripe.card.validateCVC(value);
+  }, "Invalid CVC.");
+
+  validator = $form.validate({
+    rules: {
+      cardNumber: {
+        required: true,
+        cardNumber: true
+      },
+      cardExpiry: {
+        required: true,
+        cardExpiry: true
+      },
+      cardCVC: {
+        required: true,
+        cardCVC: true
+      }
+    },
+    highlight: function (element) {
+      $(element).closest('.form-control').removeClass('success').addClass('error');
+    },
+    unhighlight: function (element) {
+      $(element).closest('.form-control').removeClass('error').addClass('success');
+    },
+    errorPlacement: function (error, element) {
+      $(element).closest('.form-group').append(error);
+    }
+  });
+
+  paymentFormReady = function () {
+    if ($form.find('[name=cardNumber]').hasClass("success") &&
+      $form.find('[name=cardExpiry]').hasClass("success") &&
+      $form.find('[name=cardCVC]').val().length > 1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  $form.find('[type=submit]').prop('disabled', true);
+  var readyInterval = setInterval(function () {
+    if (paymentFormReady()) {
+      $form.find('[type=submit]').prop('disabled', false);
+      clearInterval(readyInterval);
+    }
+  }, 250);
+
+</script>
+
