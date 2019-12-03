@@ -3,28 +3,36 @@
   <title>Your Profile</title>
   <meta name="viewport" content="width = device-width, initial-scale = 1">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css?family=Niconne&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-  {{!--FOR SELECT MATERIALIZE--}}
+  
   <script>
+    //for Select-materialize drop downs
     $(document).ready(function () {
       $('select').material_select();
+      $("#card-1").removeClass("overlay")
     });
+
+    //for shadowing the unactive parts 
+    function myActive(num) {
+       $(`#card-${num}`).removeClass("overlay")
+      $(`#card-${num- 1}`).addClass("overlay")
+}
   </script>
 </head>
 
 {{!-----------------------------------------------CONTENT START-----------------------------------------------------}}
-
-{{!--SINGLE PROFILE PAGE FOR EACH PET SIGNED UP--}}
 <div class="row">
 
   {{!------------------------------------------CARD BOOK SERVICES START---------------------------------------------}}
-  <div class="column">
+  <div  class="column" >
+    <div id="card-1" class="overlay">
     <div class="card">
       <div class="card-content">
         {{!--Fred = dummy value for pet_name--}}
-        <h3>FRED</h3>
+        <h3>Fred</h3>
         {{!--Male = dummy value for pet_gender--}}
         <h4>Male</h4>
         </br>
@@ -99,7 +107,7 @@
 
         {{!--SUBMIT BUTTON START--}}
         <div class="row">
-          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <button onclick="myActive(2)" class="btn waves-effect waves-light" type="submit" name="action">Submit
             <i class="material-icons right">spa</i>
           </button>
         </div>
@@ -126,20 +134,22 @@
         {{!--FOOTER END--}}
       </div>
     </div>
+    </div>
   </div>
   {{!----------------------------------------CARD BOOK SERVICES END---------------------------------------------}}
 
   {{!------------------------------------------CARD PROFILE START-----------------------------------------------}}
   <div class="column">
+    <div id='card-2' class="overlay" >
     <div class="card">
       <div class="card-image">
         {{!--Picture = dummy example for pet_image--}}
         <img src="https://s-media-cache-ak0.pinimg.com/originals/3b/f0/77/3bf0775b0d234545d14a5941be966ab2.jpg" />
-        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">pets</i></a>
+        <a class="btn-floating halfway-fab waves-effect waves-light teal"><i class="material-icons">pets</i></a>
       </div>
       <div class="card-content">
         {{!--Fred = dummy value for pet_name--}}
-        <h3>FRED</h3>
+        <h3>Fred</h3>
         {{!--Male = dummy value for pet_gender--}}
         <h4>Male</h4>
         </br>
@@ -197,7 +207,7 @@
         </div>
         <div class="button">
           <div class="row1">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Check-Out
+            <button onclick="myActive(3)" class="btn waves-effect waves-light" type="submit" name="action">Check-Out
               <i class="material-icons right">pets</i>
             </button>
           </div>
@@ -224,15 +234,17 @@
         {{!--FOOTER END--}}
       </div>
     </div>
+    </div>
   </div>
   {{!------------------------------------------CARD PROFILE END-----------------------------------------------}}
 
   {{!-----------------------------------------CARD BILLING START----------------------------------------------}}
   <div class="column">
+<div id='card-3' class="overlay" onclick="myActive()">
     <div class="card">
       <div class="card-content">
         {{!--Fred = dummy value for pet_name--}}
-        <h3>FRED</h3>
+        <h3>Fred</h3>
         {{!--Male = dummy value for pet_gender--}}
         <h4>Male</h4>
         </br>
@@ -401,6 +413,7 @@
       </div>
     </div>
   </div>
+  </div>
 {{!------------------------------------------CARD BILLING END--------------------------------------------------}}
 </div>
 {{!---------------------------------------------CONTENT END----------------------------------------------------}}
@@ -417,7 +430,7 @@
   }
 
   .credit-card-box .form-control.error {
-    border-color: red;
+    border-color: teal;
     outline: 0;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
   }
@@ -501,7 +514,7 @@
   @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans);
 
   body {
-    background-color: rgb(223, 221, 221);
+    background-color: #D9D9D9;
   }
 
   .inline-icon {
@@ -526,8 +539,8 @@
   .btn-large,
   .btn-small {
     text-decoration: none;
-    color: #fff;
-    background-color: lightsalmon;
+    color: rgb(4, 243, 243);
+    background-color: teal;
     text-align: center;
     letter-spacing: .5px
   }
@@ -545,13 +558,13 @@
   }
 
   .card {
-    background-color: rgb(250, 216, 216);
+    background-color: #F4B454;
     margin: 10px auto;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.7);
   }
 
   .line {
-    color: lightsalmon;
+    color: teal;
   }
 
   .card-header {
@@ -573,11 +586,11 @@
   }
 
   .card-content h3 {
-    font-size: 25px;
+    font-size: 35px;
     margin-bottom: 0;
     margin-top: 0;
     color: Black;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Niconne', cursive;;
   }
 
   .card-image {
@@ -592,7 +605,7 @@
     font-size: 14px;
     margin-top: 0;
     margin-bottom: -10px;
-    color: lightcoral;
+    color: rgb(1, 153, 153);
     font-family: 'Montserrat', sans-serif;
   }
 
@@ -606,6 +619,7 @@
   .card-footer {
     border-top: solid 1px #B6B6B6;
     padding: 3px 5px 5px 5px;
+     background-color: rgb(247, 208, 150); 
   }
 
   .card-footer ul {
@@ -624,12 +638,16 @@
     font-size: 10px;
   }
 
+  .overlay {
+    opacity: .3; 
+  }
+
   .card-footer ul li i {
-    color: lightcoral;
+    color: teal;
   }
 
   .collapsible {
-    background-color: lightcoral;
+    background-color: rgb(0, 216, 216);
     color: black;
     cursor: pointer;
     padding: 8px;
@@ -654,8 +672,8 @@
     padding: 10px 18px;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
-    border: solid .2px lightcoral;
+    background-color: white;
+    border: solid .2px teal;
 
   }
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
