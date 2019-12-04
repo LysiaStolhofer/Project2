@@ -1,55 +1,57 @@
-
 body {
   background-color: #d9d9d9;
 }
+
 .brand-logo {
   font-family: 'Niconne', cursive;
-  font-size: 55px;
-  padding: 20px
+  font-size: 105px;
+  padding: 25px;
+  margin: 5px;
 }
 
-#nav-mobile{
+#header {
   font-family: 'Niconne', cursive;
-  font-size: 55px;
+  font-size: 85px;
+  color: #F4B454;
 }
-
 
 .title {
   font-family: 'Niconne', cursive;
   font-size: 35px;
+  color: #F4B454;
 }
+
 .boardingHeader {
   font-family: 'Niconne', cursive;
-  font-size: 25px;
+  font-size: 30px;
+  color: #F4B454;
 }
+
 .p {
   font-size: 20px;
 }
 
 /* Reviews */
-
 .card-content {
   font-size: 20px;
-} 
-
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px 45px;
+}
 
 /* Sticky Footer */
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+
 }
 
 main {
   flex: 1 0 auto;
 }
-
-.white-text
-{
-  font-family: 'Niconne', cursive;
-  font-size: 35px;
-}
-    
 
 * {
   box-sizing: border-box;
