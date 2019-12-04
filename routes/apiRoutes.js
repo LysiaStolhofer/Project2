@@ -4,7 +4,7 @@ module.exports = function(app) {
   // Get all data
   app.get("/api/AllData", async (req, res) => {
     try {
-      const data = await db.Clients.findAll({});
+      const data = await db.Client.findAll({});
       res.json(data);
     } catch (error) {
       res.status(400).json({ error: { name: error.name, msg: error.message } });
@@ -14,7 +14,7 @@ module.exports = function(app) {
   // Get all client profiles
   app.get("/api/profile", async (req, res) => {
     try {
-      const data = await db.Clients.findAll({});
+      const data = await db.Client.findAll({});
       res.json(data);
     } catch (error) {
       res.status(400).json({ error: { name: error.name, msg: error.message } });
@@ -24,7 +24,7 @@ module.exports = function(app) {
   // Get Pet Profile
   app.get("/api/profile/:id", async (req, res) => {
     try {
-      const data = await db.Clients.findAll({
+      const data = await db.Client.findAll({
         where: {
           id: req.param.id
         }
@@ -38,7 +38,7 @@ module.exports = function(app) {
   // Create a new profile
   app.post("/api/profile", async (req, res) => {
     try {
-      const result = await db.Clients.create(req.body);
+      const result = await db.Client.create(req.body);
       res.json(result);
     } catch (error) {
       res.status(400).json({ error: { name: error.name, msg: error.message } });
@@ -67,7 +67,7 @@ module.exports = function(app) {
   // Delete an Profile by id
   app.delete("/api/profile/:id", async (req, res) => {
     try {
-      const result = await db.Clients.destroy({ where: { id: req.params.id } });
+      const result = await db.Client.destroy({ where: { id: req.params.id } });
       const deletedRowCount = result;
       const status = deletedRowCount > 0 ? 200 : 404;
       res.status(status).json({ deletedRowCount });
