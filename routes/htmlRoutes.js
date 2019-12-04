@@ -36,7 +36,8 @@ module.exports = function(app) {
   // Load Profiles page
   app.get("/profile", async (req, res) => {
     try {
-      res.render("profile");
+      const clients = await db.Clients.findAll();
+      res.render("profile", { clients });
     } catch (error) {
       res
         .status(400)
@@ -54,7 +55,7 @@ module.exports = function(app) {
         .render("400", { error: { name: error.name, msg: error.message } });
     }
   });
-   // Load Profile page and pass in a profile by id
+  // Load Profile page and pass in a profile by id
   app.get("/profile/:id", async (req, res) => {
     try {
       const profile = await db.Clients.findOne({
