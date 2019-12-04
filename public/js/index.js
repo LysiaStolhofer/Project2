@@ -41,6 +41,7 @@ $("#newMember").click(function() {
   window.location.href = "/enroll";
 });
 
+
 // Enrollment form submit button
 $("#submit").click(function() {
   const profileObj = {
@@ -69,3 +70,4 @@ $("#submit").click(function() {
     window.location.href = "/profile";
   });
 });
+
