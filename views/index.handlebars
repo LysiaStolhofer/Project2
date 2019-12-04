@@ -1,98 +1,120 @@
-
-<nav>
-  <div class="nav-wrapper teal">
-    <a href="#" class="brand-logo">Primp & Play</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="#">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#reviews">Reviews</a></li>
-    </ul>
+<div class="section no-pad-bot" id="index-banner">
+  {{!-- <div class="container"> --}}
+  <br><br>
+  <h1 id="header" class="header center text"><i class="material-icons">pets</i> Primp & Play <i
+      class="material-icons">pets</i></h1>
+  <div class="row center">
+    <h5 class="header col s12 light">Grooming, Boarding & Daycare for your pets</h5>
   </div>
-</nav>
 
-<div class="slider">
-  <ul class="slides">
-    <li>
-      <img src="https://www.roveroaks.com/wp-content/uploads/2018/04/home-dog-daycare-image.jpg"> <!-- random image -->
-      <div class="caption center-align">
-        <h3>Doggy Daycare</h3>
-        <h5 class="light grey-text text-lighten-3">Full or half day available</h5>
-      </div>
-    </li>
-    <li>
-      <img src="http://bednbiscuitranch.com/wp-content/uploads/2018/11/Dog-and-Cat-Grooming-Image-1-1024x535.jpeg"> <!-- random image -->
-      <div class="caption left-align">
-        <h3>Grooming services</h3>
-        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-      </div>
-    </li>
-    <li>
-      <img src="https://image.shutterstock.com/image-photo/group-pets-together-over-white-260nw-1177354594.jpg"> <!-- random image -->
-      <div class="caption right-align">
-        <h3>Boarding</h3>
-        <h5 class="light grey-text text-lighten-3">Dogs, cats, birds and bunny boarding services</h5>
-      </div>
-    </li>
-  </ul>
+  <br>
+  {{!-- Buttons for new member and existing member --}}
+  <div class="row center">
+    <a class="waves-effect waves-light btn-large" id="newMember">New Member Sign-Up</a>
+    <a class="waves-effect waves-light btn-large" id="memberLogin">Member Login</a>
+  </div>
+  <br><br>
+
 </div>
 
-
-<<<<<<< HEAD
-        <img src="/public/images/Primp-play.png">
-        
-        {{!-- Buttons for new member and existing member --}}
-        <a class="waves-effect waves-light btn-large" href="/newform">New Member Sign-Up</a>
-
-        <a class="waves-effect waves-light btn-large" href="/profiles">Member Login</a>
-
-        
-=======
-        
-
-
-        
-
-{{!-- Buttons for new member and existing member --}}
-<div class="buttons">
-  <a class="waves-effect waves-light btn-large" id="newMember">New Member Sign-Up</a>
-  <a class="waves-effect waves-light btn-large" id="memberLogin">Member Login</a>
-</div>
-
-
->>>>>>> e67b814a758078238bbfb6a43c2bc81a958e004a
 {{!-- About Us --}}
-<div id="about">
-  <div class="container">
-  <h5 class="title">About Us</h5>
-  <img src="/public/primp-playlogo.png">
-  <p class="p">At Primp & Play, we have created the ideal environment for your pet’s boarding, daycare or grooming needs. We are a locally owned business staffed with people who are passionate about animals. At Primp & Play, we provide playful days and peaceful nights by providing your pet with daily play sessions and luxurious accommodations.</p>
-<p class="p">Our unique model was designed with your pet’s comfort and safety as our top priority. During your travels, you will receive peace of mind knowing your pet is receiving exceptional care!</p>
+<div id="about"></div>
+<div class="col s12 m7">
+  <div class="card horizontal">
+    <div class="card-image">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/5/54/Running_in_the_grass_yard%40Affectionate_Pet_Care.JPG">
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <h5 class="title">About Us</h5>
+        <br>
+        <p class="p">At Primp & Play, we have created the ideal environment for your pet’s boarding, daycare or grooming
+          needs.</p>
+        <br>
+        <p class="p">We are a locally owned business staffed with people who are passionate about animals.</p>
+        <br>
+        <p class="p">At Primp & Play, we provide playful days and peaceful nights by providing your pet with daily play
+          sessions and luxurious accommodations.</p>
+        <br>
+        <p class="p">Our unique model was designed with your pet’s comfort and safety as our top priority. During your
+          travels, you will receive peace of mind knowing your pet is receiving exceptional care!</p>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-{{!-- Services List with Icons --}}
-<div id="services">
-  <div class="container">
+
+{{!-- Services List --}}
+<div id="services"></div>
+<div class="container">
+  <div class="section">
+    <h5 class="teal white-text">Services</h5>
+
+
+    <!--   Icon Section   -->
     <div class="row">
-      <div class="col l6 s12">
-        <h4 class="title">Services at Primp & Play</h4>
-        <h5 class="title">Grooming</h5>
-        <p class="p">Treat your pet to a day at the spa with Primp & Play! We happily offer dog and cat grooming services seven days a week at our multiple locations</p>
-        <p class="p">Regular pet grooming is about more than looks – grooming plays an important role in keeping your dog or cat healthy and happy. When your dog or cat visits our spa, they’ll be treated to the ultimate pet grooming experience. A full-service pet grooming package involves the following individualized services:</p>
-       
-       {{!-- Playcare --}}
-        <h5 class="title">Playcare</h5>
-        <p class="p">Doggy day care is the best way to ensure that your dog or pup is receiving the attention and care they deserve while you are busy with work, travel or errands. Utilizing our doggy day care services will give dog owners peace of mind while away from your pet!</p>
-        {{!-- Boarding --}}
-        <h5 class="title">Boarding</h5>
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center teal-text"><i class="fas fa-bath"></i></h2>
+          <h5 class="center">Grooming</h5>
+
+
+          <p class="p light">Treat your pet to a day at the spa with Primp & Play! We happily offer dog and cat grooming
+            services seven days a week at our multiple locations.</p>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center teal-text"><i class="fas fa-dog"></i></h2>
+          <h5 class="center">Daycare</h5>
+
+          <p class="p light">Doggy day care is the best way to ensure that your dog or pup is receiving the attention
+            and care
+            they deserve while you are busy with work, travel or errands. Utilizing our doggy day care services will
+            give
+            dog owners peace of mind while away from your pet!</p>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="icon-block">
+          <h2 class="center teal-text"><i class="fas fa-home"></i></h2>
+          <h5 class="center">Boarding</h5>
+
+
+          <p class="p light">We have multpile types of boarding available. Please see below for more details!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+</div>
+
+{{!-- Boarding --}}
+<div id="about"></div>
+<div class="col s12 m7">
+  <div class="card horizontal">
+    <div class="card-image">
+      <img
+        src="http://www.pethealthnetwork.com/sites/default/files/articles/dogs-cats-birds-and-bunnies-one-house-fb-167580013_0.jpg">
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
         <h6 class="boardingHeader">Dog boarding</h6>
         <p class="p">We make goodbye a little less “ruff” with our Dog Boarding services.</p>
-        <p class="p">Whether you choose our standard dog suite or the royal dog luxury suite, you can be confident that your pup will be treated like our preferred guest while you’re away.</p>
+        <p class="p">Whether you choose our standard dog suite or the royal dog luxury suite, you can be confident that
+          your pup will be treated like our preferred guest while you’re away.</p>
         <h6 class="boardingHeader">Cat boarding</h6>
-        <p class="p">Let us give your cat a purrrfect stay. Choose one of our cat condos and you can be sure that your cat will be treated like royalty while you’re away.</p>
-     <h6 class="boardingHeader">Bird boarding</h6>
-     <p class="p">When you board your bird with Primp & Play, our exceptional pet care staff will collect specific information to ensure quality care and to replicate the home environment as closely as possible.</p>
-     <h6 class="boardingHeader">Bunny boarding</h6>
-     <p class="p">Our bunny boarding staff is properly trained to provide exceptional care for your rabbit friend. We will monitor your bunny’s health daily and keep records of their behaviors during their stay. We feed bunnies premium bunny food, and allow owners to bring bunny food from home in pre-measured and pre-marked baggies.</p>
+        <p class="p">Let us give your cat a purrrfect stay. Choose one of our cat condos and you can be sure that your
+          cat will be treated like royalty while you’re away.</p>
+        <h6 class="boardingHeader">Bird boarding</h6>
+        <p class="p">When you board your bird with Primp & Play, our exceptional pet care staff will collect specific
+          information to ensure quality care and to replicate the home environment as closely as possible.</p>
+        <h6 class="boardingHeader">Bunny boarding</h6>
+        <p class="p">Our bunny boarding staff is properly trained to provide exceptional care for your rabbit friend. We
+          will monitor your bunny’s health daily and keep records of their behaviors during their stay. We feed bunnies
+          premium bunny food, and allow owners to bring bunny food from home in pre-measured and pre-marked baggies.</p>
       </div>
     </div>
   </div>
@@ -101,30 +123,31 @@
 {{!-- Reviews --}}
 <div id="reviews">
   <div class="container">
-<h5 class="title">Reviews</h5>
-<p class="p">While planning your vacation, we understand that finding a safe place for your pets can be stressful. At Primp & Play, we take pride in our open and clean facility. We encourage our clients to stop by and take a tour at their convenience. Take a look at what some of our clients have to say about us!</p>
-  <div class="container">
-    
+    <h5 class="teal white-text">Reviews</h5>
+    <p class="p">While planning your vacation, we understand that finding a safe place for your pets can be stressful.
+      At Primp & Play, we take pride in our open and clean facility. We encourage our clients to stop by and take a tour
+      at their convenience. Take a look at what some of our clients have to say about us!</p>
+
     {{!-- Review 1 --}}
+    <div class="container">
     <div class="row">
-      <div class="col s12 m7">
+      <div class="column">
         <div class="card">
           <div class="card-image">
             <img src="https://www.aspca.org/sites/default/files/cat-care_urine-marking_main-image.jpg">
             <span class="card-title">Milo & Otis</span>
           </div>
           <div class="card-content">
-            <p>"Milo and Otis love staying at Primp & Play. My mind is at ease while I travel that they're having fun."</p>
+            <p>"Milo and Otis love staying at Primp & Play. My mind is at ease while I travel that they're having
+              fun."</p>
             <br>
             <p>Jack Smith ~ Client since June 2018</p>
           </div>
         </div>
       </div>
-    </div>
 
-{{!-- Review 2 --}}
-<div class="row">
-      <div class="col s12 m7">
+      {{!-- Review 2 --}}
+      <div class="column">
         <div class="card">
           <div class="card-image">
             <img src="https://secure.i.telegraph.co.uk/multimedia/archive/01597/missing-dog_1597174c.jpg">
@@ -137,11 +160,9 @@
           </div>
         </div>
       </div>
-    </div>
 
-    {{!-- Review 3 --}}
-<div class="row">
-      <div class="col s12 m7">
+      {{!-- Review 3 --}}
+      <div class="column">
         <div class="card">
           <div class="card-image">
             <img src="https://heritagehumane.org/small-pets-thinking-outside-the-box/img_1020/">
@@ -154,18 +175,17 @@
           </div>
         </div>
       </div>
-    </div>
 
-    {{!-- Review 4 --}}
-    <div class="row">
-      <div class="col s12 m7">
+      {{!-- Review 4 --}}
+      <div class="column">
         <div class="card">
           <div class="card-image">
             <img src="http://www.melbournebirdboarding.com.au/wp-content/uploads/2017/01/cropped-DSC_3674.jpg">
             <span class="card-title">Birdy</span>
           </div>
           <div class="card-content">
-            <p>"Birdy loves all the care takers at Primp & Play.  They send me status updates and keep me informed while I'm away."
+            <p>"Birdy loves all the care takers at Primp & Play. They send me status updates and keep me informed
+              while I'm away."
             </p>
             <br>
             <p>Angela David ~ Client since May 2019</p>
@@ -173,32 +193,8 @@
         </div>
       </div>
     </div>
-</div>
-  {{!-- Footer --}}
-  <footer class="page-footer teal">
-    <div class="container">
-      <div class="row">
-        <div class="col l4 s12">
-          <h5 class="white-text">Primp & Play</h5>
-          <p class="grey-text text-lighten-4">Grooming, Boarding & Daycare for your pets</p>
-        </div>
-        <div class="col l4 offset-l4 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Services</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Reviews</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Member Login</a></li>
-          </ul>
-        </div>
-      </div>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-        © 2019 Copyright Andrea Williams, Liana Bette, Lysia Stolhofer, Sonja Hennessy
-      </div>
-    </div>
-  </footer>
+  </div>
   <!-- Javascript & jQuery -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="js/index.js"></script>
+  <script src="/public/js/index.js"></script>
