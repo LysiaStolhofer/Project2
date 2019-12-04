@@ -1,3 +1,21 @@
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Pontano+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Niconne&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Profiles</title>
+  <meta name="viewport" content="width = device-width, initial-scale = 1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+  {{!--FOR SELECT MATERIALIZE--}}
+  <script>
+    $(document).ready(function () {
+      $('select').material_select();
+    });
+  </script>
+</head
 {{!----------------------------------------------CONTENT START-----------------------------------------------------}}
 <div class="row">
 
@@ -10,13 +28,13 @@
           src="https://ichef.bbci.co.uk/news/624/cpsprodpb/BE3A/production/_106189684_66d302ff-fdc7-48bc-8b1d-91a2318766e6.jpg">
         <span class="card-title">{{pet_name}}</span>
         {{!--CAN FLOATING BTN LINK TO SIGNED IN PET PROFILE?--}}
-        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">pets</i></a>
+        <a class="btn-floating halfway-fab waves-effect waves-light teal"><i class="material-icons">pets</i></a>
       </div>
       {{!--BUTTONS UNDERNEATH PET PIC FOR SIGN IN--}}
       <div class="card-action">
         {{!--BUTTON OPENS POP-UP TO PROMPT FOR PASSWORD, THEN LINKS TO
           SINGLE PROFILE--}}
-        <a onclick="myPopup()" href="#">Sign in {{pet_name}}</a>
+        <a class="niconne" onclick="myPopup()" href="#">Sign in {{pet_name}}</a>
         <div class="form-popup" id="myForm">
           <form action="/action_page.php" class="form-container">
             <h4>Login</h4>
@@ -55,275 +73,8 @@
   </div>
 
   {{!------------------------------------------------CARD 1 END------------------------------------------------------}}
-
-  {{!----------------------------------------------CARD 2 START----------------------------------------------------}}
-  <div class="column">
-    <div class="card">
-      <div class="card-image">
-        {{!--IMAGE IS JUST AN EXAMPLE | IMG WILL BE GIVEN FROM CLIENT INPUT--}}
-        <img
-          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTEhMWFhUXGBcXGBgXFxYVGBkXGBcWFxUXFxcYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFQ8PFSsZFRkrKysrKystNy0tLS0tLS0rLS03LS0rLSs3Ny0rLS0tKzc3LSsrKysrLSstKysrKysrK//AABEIAKgBLAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAECBQAGB//EADcQAAEDAgUCBAUDBAICAwAAAAEAAhEDIQQSMUFRBWEicYGREzJCobEG0fAUweHxUmJykiMzU//EABgBAQEBAQEAAAAAAAAAAAAAAAABAgME/8QAGhEBAQEBAQEBAAAAAAAAAAAAAAERAhIhA//aAAwDAQACEQMRAD8AY6d1Q02hplw0vf1k7eSPmJMwGgAE7i9yIO6y6V3AQBfYWR65fYTreDpB3XB6GhSDcpDTrJk2JP8A2jVWxTi25Phytjz3skPihjcxHhGncnkcBXxnjpMyaQTzr/CgEHA+Jxc0b2H73TQeS20ObtcAhebrgl0AkiLD8mNkfBVi1+QPJdxtHrZQb7Q2JkAgWIMjvLVQF4GYvHiEDLpAKWFSkTLneL5ZaJ/FlepklpEmRE22UrYuHxPigmRwQtHCVg+wBtPhssilVgycrhNgJNxqCbQU6zEAmWjKSLqI1TiReRcC1lAxYbJBidQQSD6KgpuAJItbXvwlah/5R+VoDrAuMkhzeDY+myXdYCABOo3nbzRA4kwwT2Ee8FAxOIEQWkkniIU1Gjh32jY3njSydbiTljMfRYzLNGYjWdQIHfv2Wx0TK9znSDAjWRdb5mpodTEO+QHa/lurUHEeEwfT+6cr9JE/EYIcAbDQ9uyz8JLmf9pIgzaDwr1zYS6dYwASTA1vpbnhV/qB9JkGII/fhLPa4ggiRuM0epn+yBh+nvZUzhxynaZgnXssYrRdVj/tp3j2QcQG5Zd4RzJiT5bpsEgAZfmMW/KjKY19jI7pgzQdGgzG50g7KK9F+WGxA5Bd/NCmOoUw0SGgX1GpteEhgcYS9zRdjtrkjv5LURek8tizX05gXMtJ1ynjshuc5jszQcm/Y/soxDGEENzMi5y9t4OqmjTBAcGl7ACDG3YgfhZoN8TNLjLmkzEx6eEaeaSrYgC4blg6SSCOBpCu13w3ZSTlNx5bK7mNcdczheMpsO9oWQfCV4G1xIOW4m4ugYuu5jg8uF/DO4m4J7yEKgWh7g4xwODrCHja7H5ovF/X6fdVNaMuE+LMdJyt+5N1auxppNDzE94OwH2SjcaHsc5oAhozNj7jshYeq42MOaY+Z0ZY0LbEISmKWDpyGjLA1OUEtHJBufRTi8HSDHOFUujSRlM8XsB6oFeqWAlz88WaAC23rul218zGzJJmxtBBsRyoUDE4tzKYLWkun7nSLIlKoTTDHTO5i0nWI0VcPPia9pDQSBqS5sCSRtfQhWbRDbsaS0DcgZIEyZv/ALVQV+FdlGS3kBvrsg0n2j4hJFjAzX4lLVsbW+RtJxHIMhwd/NEz08U6bcpEGZIEmDAtPoootXD5AN3OkA8eiriapYQ20ZRM8dlauWA+M5o1FxHkl8ZjmAFxZMQLCTwLLZKlrw+2WN/PYc3V8NSh0BwmDA2aD/k/dUp1y1hcaZEwWiLmRI00THRSKlTxDJbU2G25VVnNovMiADOw1RaWCykFokum+7TwRstfrFMB8UfE0H55EunX0B3SoNQ3IbxO/mSN1KRlDC5XkxZ2vn5ItHpzgXz2c03sRr7haD6RI0l1ryAfdXe+xaTbXn7qNEXVGk2LQ76ozH8hDNXTLJneBY7g3Rqr4u1sCeN0KHeKAPESZJAynWQDrwomjNxIHhc90aaGEtiKhDuY0PIQPH9Zv5/jZWo4vVjrjadQf2QN5zZ1+RBgppuNa9hLgHOkNBAPf381nvqgiMsu2vEcqn9S4jLTgAOufTX3lWRLThwwsDlIN/GQB97Svbfp/CFtOTlg8AR7xdeZ6W6mwAvaHVCJaHXDQPqjcnZen6e57hLn5p5AEei7cRz6a0x9LfQpU4Gm52YeEzfujUaIG6Za0LtZK5y2FMV0Zrm+HwutftugVeiuyQx8GZ0sfNa4Vnmyz4i+6yKPTagEZwZ1G3pwow3SCPE4+i11R7yp4i+685W6a8vIFhB8UkRxpqr0sDTpfR8R3/LKB/PVari6VLniIcfeFfET3XmeqMDpGQCW6GPbuFhMNVriKbfCRqzb00XrsfTy/OJbs60DztosrH4MX3neRl85EQVw7n115vxk1HtjLVeMwmDE2N4OW0gypbUcW+J82BjS2xIG/muOGymftuoruY9k0wA5k5rQSN7LlVJ4qSTM2HbRDrUy5giDoQZiI5KbpFrmtNibiNiIsT5f2VazAychlrtO3I/uoxaH0cPBcHXaGu2BExIvuEZuUc5XmGlsnKToSN28oXTquVxDTBcDJnfQZRzdDa/wnkHTurqah7iPnkC1i7MT5A6BFw5DyIEBvMaI2IYHWEwW5m9519RceiBh6Raw6wYHrN/spq6DWquLnANOWAJE2vZMU3Etaz6iBmkkCL5ZI1t+Qnm0QBm0sRETM6+66oyWgNblaNY1M/6WmiGOxGTxDiA2YEgRYRcdyUpVeSZExtsj46jndA1PJt/hKVqbgcrYIaIkk33MRtdBNG3zX+62KnhqPcRDWxewmALBKswbTFsoGw0TDKlUPzkNqETFvlB4BsuvhmPP4vH1n1STUcJNmhxAA2CcwzXFzZzT/wBnktdGscLZqYajUaHHDBrwAJnUCwJHKLh6dORJvGkSB6x4UxsviW1bFpDY+ixHNyVVoc4DOchTTsxMuIcNspED0G6BjsP9bqkMkARqTuI5WasTVZGW5Pi1F7R2Rf6dpkkm14iD90vWxLG+G4yiTIuRr6IFLqbXtJptMj6bz6Tr5KY0rXrEPaxgHi5vYdlLhlLvDYH6b+qq4AkOIG2U7wdRG0GQqUcwEh2UyRY7bTZMYoGJbnPgE8QLolTDCmZLHC0SflmOOUxh6MZnQS6IzHabW43S1UVHkA3b3IMmIMwmBSpniGgjMfmEQByeyBh6bg8fE2nXTuVqYfCgtJLhAnaMsbylq9BtRsNIIm8X9lqIawFMkuOYwQAH2gcgHWfJew6T0hraYILnEwcxJk7rzn6T6W51XJUALWgEWgxwvpDQGwAIAXbiOfSmHpH6iuxmNpUW5qr2sby4gf7RS61l4j9RseKlRxb8V4ZNMHadco5XRzbg/WOEccraoJ9RPlITlbqQLRB1hfPq9MOoNNdmR5DpG8QYPvCe6VQrfAYSZloPdRZHuKnUGxqjUqgIsvmnVXVDUFIvc0ZS52UwTFg0HZL0WHD1ctHE1BUESHPLmmdBlcbpq4+o1Qdln4hkgzH4+67oXVPjU5dAeCWuA0zDWOyvjaN5GhTUY1DEOaSwklp5vB/ZLs6fL8173ibA8KtXDOzm4IW30zDABq55tdNyFh0y2ixuodGIJcJaeRv5r3gYEvi6ILTZL+fxn0+XMgEhpuPtKs0GPHvxr2lP9doVKdSc8NdtH4OyTp1XEfPP/kAfJeTrnK1CrhlcD3BB8lYau8yQVDZdJy6W3UtqCYOqwYJhqp8Q/l72WlUOjWxIANwSP2lI0jBB23tvstJ1aQC4gmAJaIPey1IYpRpve0gmI7xPkNP9I+IADcpu60nvrFkEOi+nM3PpCpVa86Gx2/vdabDyQ0ySYcNDeb28tE5kO1/QfdCfTLoaQ51wdRA9VFV8GMrj5GE1HObB2/Khlcg3FlZlFzgSBYaq9OhIMh07Wt6r2OamZHpPbBDmBwNrkj8Jc0+6s0W1UxdFe5pgZZA0EkfhUxb3yCxjCRpnM5f/ABmwPmqR/tWGEdEgEjnULPlqdAOaWu8bWAkXiXOjzEtHql6GGpPc76QBZxM39ALpshd8JrhG/eFLys6L0qjDLXVHGCYJbpyCRqPur02hk5g4z8uQAh3MONge2qvWwIjwPAtB8LXD90SjiKrRkIGXmRE+RWfK6tiaYayHU/E9uYD5tDubAG52WS6i2M2xudrjgDdblTEBzDnBBaLZjmAPIN5HkqOwTKlrCQLj6eT5JhrKbQqATTILXRvGukghWZh8uYvbJBI8MTa1i0LQq4Q0acTGQS4EgguPHpGirgWOcwucIBMtiAmD0v6dY1oJGpidj6raBusH9OYQ/OSYiBeZ7leha1d+XLtJCzOq9MZVbDiWkaOBgjyIT1WvCUqsLwZOUff0VZYOL/T9IxTY5zqjvqc4uMDXXQLPAxraoohrAdQJbGXScy3cXjqGDY54aSed3Ha680OrvqZXupOzy6HAOsCZjVRWt1L9NOc9j3mJblcQdDsRzdZ2P6Q9lUO+Ex9SIFSSLclvPqvQfpzq3x2vbUs5riMp1jZaFUBsX8lFK9Hw3w6YEQTcnlx1KbzG8mR+FMoblqRms3qFniN0XC1SLIhf4wDon/6YJhpnCVsw7rsU6yExmUqa11Ued/U1FrqdxJ4Bg++y8rXoluX4bTG+jiJ7r2PWWEtMLy9bDwP+TtYECB5k6rz/AKcuvJP4BPjvIkGTa6WxIcIFOHOOp2Glkd9IMvlhx3P9whveTDQ3XVwiJ4XG8t4aaSaenY8g7QN0k7H5YaA4Hu0lsb3BkKHPZam5zhF5AjX/AJDfRXxFNsSTMaASCNItuDBTFaVIlwaW+Jxjw7Ac38wm2F2QEw3n3jTRZVPC5XZSS0ZZzXsYGWD24TDwQw5RJAkSNY+Y+e6Bp1drRkbMkRItbz5UUKpAgz6EmyRFb37/AOEk+oJPij1TGWyCmW4x4EflLFqLSHK9bkKCTcx6CFxVc6sx3KARnSD/AGVnPcBAcYOwJHumZlS+nbX7KKSLbKtUcfcJkUJ8lR9CNEC9MpgkA3lT/SmJ4VWiLn23RVTVmxuOJ/dNU3jceX7BVdRYRZyWdT4KmLpyvXuATAOsifJWe8nwghwgAH8zaFnmm7Uko1LjlPJr1vRgAy2n2TlWuAlMHTy0wOyWqldHOn212m6Di67cshwWNXJJjZDcyNVNEYfAfFqZ612N+VuxPJWu7ENAgQsg4oiyVq4gqKNjh8Ou2szR3hf/AGK2WVw5oKwqbswgouBDmkjY/wB/4EG20gXBsVbMsqmTHkf9hM06nC1Eq1Y3lbdMSAVmOYCtLB/KPJaZEc1Uyq73IT6kIpHqTQGleBxFZzKp/novb9QxBgy2PVfPes4w/EOXb3HfyXH9I68Gq2fVos6/IjhYFXHlpyupOmdR/LLTodQgEOO+h4U1cW3/APMEch038iuOOhFzzUBIsRYE78ZvygVurBjQHHM//k2wWi1rWg5S0AjMcwPrcAweyzMV0rOeBs4gkHfVth6pgYxnVazy3JU+bXbTUTpZM0nua1rnOILSZM2IOxKV6X04hklwLGyW5Tcu47DYpWthXPBLyREHt3PkmJXYpgzujxDXUmx0uhGvlsKTnRuJP3JTbqZNEkeEtlugJcHEFh7jX3SX9W+n4Q6AmM69uQrNcdFZ19VC9Lku0K5CG0q4eVFGaVAxDRN0J1VBfGyimTiDECIXf1toyz6pcRyFQ1EDhxHhi08f5VaFNxNgUmKt01TxHFlcUGoYcozHUXRcVVGgvykw7KpiHBXdpsfSE30xoLwN1kivO5TvTsTkOlytRHtS60JKq26JgzLQeVeq0BaZZ9WndCcJB7IlZ90JouTtBWK0SrU90ajhgWyfRMOjLJQqVS4nbQIKMoQmaLVUume6IxwA+37oOqsA9b+u6rhKcIobKIGwtRDARW1iBE2QA5RUEhaZMDEcIFfGEahZGMqmncFCHVGuGqBPrX6giWgFeNxWJc90xP5Wx14AmQQstlI7fbX32XHt15X/AKXOPCb6AG99YG6Hh6T92kxrkcB+VDcKXGcxtoQ4krRpU7WE9xysY2WFIkEAz2fkJP3ErnYkEBpY5kWzQA09srjqtAgH5xTsJBiTI0Gn7oLiyoYLtdJH2Uw1ZldlJuV8ua6ZmCQdoSJd4D8JwcbjxNkhv/GNyuNKmQW1CfDYEQZIO5OyUaxoMszAd4n7WUNG6ewPDmua5oLcp1yjgibg9kA9PazwkOqR9XKZxIa4AsqZHus6QYPcNG6s6lw53fUXUZr0kd1QNKkFT8UhelzTBUgkbhCdVKqy6KYNXYoUSqgKMyCzgoIUKc4QVyqplWbUQygIHQoc6dlACuFBRjVq9LoBzxZZ4qei3eiYf6itRG6LCyXeOUWUGoVpGbVf4oV+yG8XnuisF1hQce6GgINB0ifRMdTZICBT8DA36jc+uyKllW+UXNp7BMU3T6JPAth5ncGUXAzcncqDToqapQGuRXLUSrFwi6vTNuVTLZUwQMwtMjYyhRc3K+m4TbNBj3lfP+q/pypTqGHhzddwSF9Lbicog6LP6vh2vbIsQix8yxOEqNtkcOJBLf8A2uh0MzHXIEa8+/C9aS5pgTf0H3VH06RH/wArGl3kD9xouVjcYjqcuF7xIAAg9tNVxaHZT4oO9teDFx6rUfQYHNLcsDQT7XG6YdTORxYIc/WYGm+vaFnGtLNcxglxyiPpbJPaw/KTxuJoHMC3MSLF3hIMSLjbRFfhWXJE3BOsE6WHqoGBBklhgACIiIm8rNWMOoS1os29oEuBn7rSw9CWhoZY6AHLHN4PGitXpADMAMstDYvzJKipTY2jIPzGHQ52b1OsKYEa/QQJlwEkEGb+Q3RsPhXBoA+O4De397pxuHaRlDozRAMwIuPVAdf6ja1nWUG58ONbIbm91ZxVcq9Dkh7UMtCLHdULhNkVw4U5FzIKq6x1nyQXcAhmOCfVGgfwSUMghBAA9FWPZc8IYKouXmbK9K5uSD5wEN5G0+qgOB5QaGAw+ZwBsV6uk0NAA2XmOmPDXDlemBgKxmuq1gPNCeYYSd1VxvKBi6maAiBMbInur1DGUckfZFpt0CDiKnigbLNaT1F1ge6Vq/8A2HvdFxDpDRwUPFt0cNVFEe2EZjdPJLVK0kDsExTekFaroJ7BGwlYOaOY+4Sj3WclKFUteBtC0jbZiIVXVLyEk991ZjlYy0PiyIcgVsQANT7SrU3jdCrAbG6owcVXJcdYndAruZzA30HnEpnFuynxbpUsbMj0WK3A6cAWMjuP2V6OGLnW12vH5XBWp1O8dyoowAiBIJ18W/nsrUsE3LERyQ4Gf3QmCRufS3ur0iYMCQpi6q/oJ+moQ3hzP83Wf1Do1SzaTc7Rcm/rZtxC3qNd0ZQ+NIloMQrteQSdPJSw15ePhxmiTBaIiGjSd5lCc+iSTBvcxMTuvWOptPzBrp2cA4fdAd0ynswRtBI+wWcXSTnoPxyfla71gBFIUtXVgIZt4+64NdtCaLLKBU7X9vwgHTw07x7BXdhg0XKsyueEKtUzGf8ACCio50ndHDLQDqhFhBjX1j7pBSShhpTPwnG5090MQqKEFcypBUtYNyoe0TYoHumVm/EC9JUrLxBxLabhe9oW+7F+EOJ1WozTtXESopvuk6T81wjSgZq4rLpqUuHe6XrG6q+plb3KxVgler4ss7H3KMypLb8LEbLnZibA+60DiALkx/nRRXU6kuPt7J1r/Csj40X5TdCtIhICZ7FDp6z2RPhpauSLaSLKod+JbmFOHxjdIhLsfDZKVpm8rSWN01WlK4lw3HqoYJEgpLqL3NbflWpAMRULrcJVxjkH0Qn1JN0QzAMWXN0cAZgmER4A0MoDn9lLalo9UDlHFuDS0OIadQIv7iFanXDSQ0k8Sk6Z2sT2V2RuSO/+EQ1/UH3KK6uTECPX+QlCDt9lYUnbanugdbUjWCPP9kcE7NMLHDi0qX13E3EqKIymgvB0lMOeIQ7LSLUzblcI5XBk3QIQWqT5oUcphhEX+1lV7kAWvgwAiOJi+qmm+8bIlQDchIF/idz6LiGm6odbK9NtwC6BvAVC9Q8Sq1aJJu8gRo0D8ox1MR57kIdR+5iwQBFJrJcB5ndZ3WerE5cptCS6xj5MNNkpgMGanicYYPc9gmj3fQcWDSBTtLGgmF5Sji8sNAgDRCr485rFNTHtKrkliHSq4DEF7AVL1KsDa7wnyKTxeKDgGzcCPMag+dkZ74BWJXku+yyraw9SWwdtE5hnQVn4VktC06VOArEp91QJXFOmFSo6ElisWGCSqhmriBGVLYbFgOylYuKxTnAvZqpfiCQyqO3vuFR7GniBEhK47EBzCPX2Kzm4qx4c2fVJf1RNj7q6QYFHY6dbJVh7oocYWFEKhoUMdG0q9Ss06CEFgNYIQwqTyVela50RRW9lZh7kfzdRTfckKrje6CXqmZS+oqwiHyzYG3khvpxuFy5BzQoqO4XLlQCoCqglcuQVLjKtUB3sVy5AOkLozjvC5cqKupt1uFh9e6g1oyNMkrlygx+nYA1TmPyjU89gtt7RZoEAbLlyBfEtI3ShplQuQeg/TGIObLsQvSnDgrlyhCeIwSwcRRyuXLlBsdPw5gGE+WFcuSFL1l5z9SV9GjzKlctDFo4hzTYp44gZY5MrlygL/UEgDZFp2UrkDdOoBFkSrWBMtAaOFy5BVzpUsC5cglzeVNNve65cimBbm6kgea5cgs0WmADsNkIA7iFy5Ef/2Q==">
-        <span class="card-title">{{pet_name}}</span>
-        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">pets</i></a>
-      </div>
-      {{!--BUTTONS UNDERNEATH PET PIC FOR SIGN IN--}}
-      <div class="card-action">
-        {{!--BUTTON OPENS POP-UP TO PROMPT FOR PASSWORD, THEN LINKS TO
-          SINGLE PROFILE--}}
-        <a onclick="myPopup()" href="#">Sign in {{pet_name}}</a>
-        <div class="form-popup" id="myForm">
-          <form action="/action_page.php" class="form-container">
-            <h4>Login</h4>
-            <label for="email"><b>Email</b></label>
-            <input id="email" type="text" placeholder="Enter Email" name="Email" required>
-
-            <label for="psw"><b>Password</b></label>
-            <input id="password" type="password" placeholder="Enter Password" name="psw" required>
-
-            <button onclick="handleauth(event)" type="submit" class="btn">Login</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-          </form>
-        </div>
-      </div>
-
-      {{!--CARD FOOTER START--}}
-      <div class="card-footer">
-        <ul id="knopf">
-          <li>
-            {{!--Miranda Mayer = dummy value for client_first_name and client_last_name--}}
-            <a><i class="inline-icon material-icons">account_circle</i> Miranda Mayer</a>
-          </li>
-          <li>
-            {{!-- mailto:email...com = dummy value for email/ mailto: needs to stay so email is able to connect to user email provider instantly--}}
-            <a href="mailto:Email@email.com"><i class="inline-icon material-icons">email</i> Email@email.com</a>
-          </li>
-          <li>
-            {{!-- tel:+1-203-111-222 = dummy value for phonenumber/ tel: needs to stay so number is able to connect call instantly--}}
-            <a href="tel:+1-203-111-222"><i class="inline-icon material-icons" width="14"
-                height="15">phone</i>+1-203-111-222</a>
-          </li>
-        </ul>
-      </div>
-      {{!--CARD FOOTER END--}}
-    </div>
-  </div>
-  {{!----------------------------------------------CARD 2 END----------------------------------------------------}}
-
-  {{!---------------------------------------------CARD 3 START----------------------------------------------------}}
-  <div class="column">
-    <div class="card">
-      <div class="card-image">
-        {{!--IMAGE IS JUST AN EXAMPLE | IMG WILL BE GIVEN FROM CLIENT INPUT--}}
-        <img src="https://cdn.cnn.com/cnnnext/dam/assets/130621132819-06-ugly-dog-contest-story-top.jpg">
-        <span class="card-title">{{pet_name}}</span>
-        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">pets</i></a>
-      </div>
-      {{!--BUTTONS UNDERNEATH PET PIC FOR SIGN IN--}}
-      <div class="card-action">
-        {{!--BUTTON OPENS POP-UP TO PROMPT FOR PASSWORD, THEN LINKS TO
-          SINGLE PROFILE--}}
-        <a onclick="myPopup()" href="#">Sign in {{pet_name}}</a>
-        <div class="form-popup" id="myForm">
-          <form action="/action_page.php" class="form-container">
-            <h4>Login</h4>
-            <label for="email"><b>Email</b></label>
-            <input id="email" type="text" placeholder="Enter Email" name="Email" required>
-
-            <label for="psw"><b>Password</b></label>
-            <input id="password" type="password" placeholder="Enter Password" name="psw" required>
-
-            <button onclick="handleauth(event)" type="submit" class="btn">Login</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-          </form>
-        </div>
-      </div>
-
-      {{!--CARD FOOTER START--}}
-      <div class="card-footer">
-        <ul id="knopf">
-          <li>
-            {{!--Carl Legend = dummy value for client_first_name and client_last_name--}}
-            <a><i class="inline-icon material-icons">account_circle</i> Carl Legend</a>
-          </li>
-          <li>
-            {{!-- mailto:email...com = dummy value for email/ mailto: needs to stay so email is able to connect to user email provider instantly--}}
-            <a href="mailto:Email@email.com"><i class="inline-icon material-icons">email</i> Email@email.com</a>
-          </li>
-          <li>
-            {{!-- tel:+1-203-111-222 = dummy value for phonenumber/ tel: needs to stay so number is able to connect call instantly--}}
-            <a href="tel:+1-203-111-222"><i class="inline-icon material-icons" width="14"
-                height="15">phone</i>+1-203-111-222</a>
-          </li>
-        </ul>
-      </div>
-      {{!--CARD FOOTER END--}}
-    </div>
-  </div>
-  {{!----------------------------------------------CARD 3 END----------------------------------------------------}}
 </div>
 
-<div class="row">
-
-  {{!------------------------------------------------CARD 4 START------------------------------------------------------}}
-  <div class="column">
-    <div class="card">
-      <div class="card-image">
-        {{!--IMAGE IS JUST AN EXAMPLE--}}
-        <img
-          src="https://ichef.bbci.co.uk/news/624/cpsprodpb/BE3A/production/_106189684_66d302ff-fdc7-48bc-8b1d-91a2318766e6.jpg">
-        <span class="card-title">{{pet_name}}</span>
-        {{!--CAN FLOATING BTN LINK TO SIGNED IN PET PROFILE?--}}
-        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">pets</i></a>
-      </div>
-      {{!--BUTTONS UNDERNEATH PET PIC FOR SIGN IN--}}
-      <div class="card-action">
-        {{!--BUTTON OPENS POP-UP TO PROMPT FOR PASSWORD, THEN LINKS TO
-          SINGLE PROFILE--}}
-        <a onclick="myPopup()" href="#">Sign in {{pet_name}}</a>
-        <div class="form-popup" id="myForm">
-          <form action="/action_page.php" class="form-container">
-            <h4>Login</h4>
-            <label for="email"><b>Email</b></label>
-            <input id="email" type="text" placeholder="Enter Email" name="Email" required>
-
-            <label for="psw"><b>Password</b></label>
-            <input id="password" type="password" placeholder="Enter Password" name="psw" required>
-
-            <button onclick="handleauth(event)" type="submit" class="btn">Login</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-          </form>
-        </div>
-      </div>
-
-      {{!--CARD FOOTER START--}}
-      <div class="card-footer">
-        <ul id="knopf">
-          <li>
-            {{!--Elizabeth Jones = dummy value for client_first_name and client_last_name--}}
-            <a><i class="inline-icon material-icons">account_circle</i> Elizabeth Jones</a>
-          </li>
-          <li>
-            {{!-- mailto:email...com = dummy value for email/ mailto: needs to stay so email is able to connect to user email provider instantly--}}
-            <a href="mailto:Email@email.com"><i class="inline-icon material-icons">email</i> Email@email.com</a>
-          </li>
-          <li>
-            {{!-- tel:+1-203-111-222 = dummy value for phonenumber/ tel: needs to stay so number is able to connect call instantly--}}
-            <a href="tel:+1-203-111-222"><i class="inline-icon material-icons" width="14"
-                height="15">phone</i>+1-203-111-222</a>
-          </li>
-        </ul>
-      </div>
-      {{!--CARD FOOTER END--}}
-    </div>
-  </div>
-
-  {{!------------------------------------------------CARD 4 END------------------------------------------------------}}
-
-  {{!----------------------------------------------CARD 5 START----------------------------------------------------}}
-  <div class="column">
-    <div class="card">
-      <div class="card-image">
-        {{!--IMAGE IS JUST AN EXAMPLE | IMG WILL BE GIVEN FROM CLIENT INPUT--}}
-        <img
-          src="data:image/jpeg;base64,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">
-        <span class="card-title">{{pet_name}}</span>
-        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">pets</i></a>
-      </div>
-      {{!--BUTTONS UNDERNEATH PET PIC FOR SIGN IN--}}
-      <div class="card-action">
-        {{!--BUTTON OPENS POP-UP TO PROMPT FOR PASSWORD, THEN LINKS TO
-          SINGLE PROFILE--}}
-        <a onclick="myPopup()" href="#">Sign in {{pet_name}}</a>
-        <div class="form-popup" id="myForm">
-          <form action="/action_page.php" class="form-container">
-            <h4>Login</h4>
-            <label for="email"><b>Email</b></label>
-            <input id="email" type="text" placeholder="Enter Email" name="Email" required>
-
-            <label for="psw"><b>Password</b></label>
-            <input id="password" type="password" placeholder="Enter Password" name="psw" required>
-
-            <button onclick="handleauth(event)" type="submit" class="btn">Login</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-          </form>
-        </div>
-      </div>
-
-      {{!--CARD FOOTER START--}}
-      <div class="card-footer">
-        <ul id="knopf">
-          <li>
-            {{!--Miranda Mayer = dummy value for client_first_name and client_last_name--}}
-            <a><i class="inline-icon material-icons">account_circle</i> Miranda Mayer</a>
-          </li>
-          <li>
-            {{!-- mailto:email...com = dummy value for email/ mailto: needs to stay so email is able to connect to user email provider instantly--}}
-            <a href="mailto:Email@email.com"><i class="inline-icon material-icons">email</i> Email@email.com</a>
-          </li>
-          <li>
-            {{!-- tel:+1-203-111-222 = dummy value for phonenumber/ tel: needs to stay so number is able to connect call instantly--}}
-            <a href="tel:+1-203-111-222"><i class="inline-icon material-icons" width="14"
-                height="15">phone</i>+1-203-111-222</a>
-          </li>
-        </ul>
-      </div>
-      {{!--CARD FOOTER END--}}
-    </div>
-  </div>
-  {{!----------------------------------------------CARD 5 END----------------------------------------------------}}
-
-  {{!---------------------------------------------CARD 6 START----------------------------------------------------}}
-  <div class="column">
-    <div class="card">
-      <div class="card-image">
-        {{!--IMAGE IS JUST AN EXAMPLE | IMG WILL BE GIVEN FROM CLIENT INPUT--}}
-        <img src="https://cdn.cnn.com/cnnnext/dam/assets/130621132819-06-ugly-dog-contest-story-top.jpg">
-        <span class="card-title">{{pet_name}}</span>
-        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">pets</i></a>
-      </div>
-      {{!--BUTTONS UNDERNEATH PET PIC FOR SIGN IN--}}
-      <div class="card-action">
-        {{!--BUTTON OPENS POP-UP TO PROMPT FOR PASSWORD, THEN LINKS TO
-          SINGLE PROFILE--}}
-        <a onclick="myPopup()" href="#">Sign in {{pet_name}}</a>
-        <div class="form-popup" id="myForm">
-          <form action="/action_page.php" class="form-container">
-            <h4>Login</h4>
-            <label for="email"><b>Email</b></label>
-            <input id="email" type="text" placeholder="Enter Email" name="Email" required>
-
-            <label for="psw"><b>Password</b></label>
-            <input id="password" type="password" placeholder="Enter Password" name="psw" required>
-
-            <button onclick="handleauth(event)" type="submit" class="btn">Login</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-          </form>
-        </div>
-      </div>
-
-      {{!--CARD FOOTER START--}}
-      <div class="card-footer">
-        <ul id="knopf">
-          <li>
-            {{!--Carl Legend = dummy value for client_first_name and client_last_name--}}
-            <a><i class="inline-icon material-icons">account_circle</i> Carl Legend</a>
-          </li>
-          <li>
-            {{!-- mailto:email...com = dummy value for email/ mailto: needs to stay so email is able to connect to user email provider instantly--}}
-            <a href="mailto:Email@email.com"><i class="inline-icon material-icons">email</i> Email@email.com</a>
-          </li>
-          <li>
-            {{!-- tel:+1-203-111-222 = dummy value for phonenumber/ tel: needs to stay so number is able to connect call instantly--}}
-            <a href="tel:+1-203-111-222"><i class="inline-icon material-icons" width="14"
-                height="15">phone</i>+1-203-111-222</a>
-          </li>
-        </ul>
-      </div>
-      {{!--CARD FOOTER END--}}
-    </div>
-  </div>
-  {{!----------------------------------------------CARD 6 END----------------------------------------------------}}
-</div>
 {{!---------------------------------------------CONTENT END----------------------------------------------------}}
 
 {{!--EXTRA CSS FOR THIS PAGE--}}
@@ -334,7 +85,15 @@
   }
 
   body {
-    background: lightsteelblue;
+    background: #D9D9D9;
+  }
+
+  h4 {
+    font-family: 'Niconne', cursive;
+  }
+
+  .niconne {
+    font-family: 'Pontano Sans', sans-serif;;
   }
 
   /* Add some hover effects to buttons */
@@ -366,7 +125,7 @@
     width: 350px;
     length: 600px;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.7);
-    background: rgb(250, 216, 216);
+    background:  #F4B454;
     color: black; 
   }
 
@@ -381,6 +140,7 @@
     display: flex;
     justify-content: center;
     font-size: 14px;
+    background-color: rgb(247, 208, 150);
   }
 
   .card-footer ul {
@@ -400,7 +160,7 @@
   }
 
   .card-footer ul li i {
-    color: lightcoral;
+    color: teal;
   }
 
   .inline-icon {
