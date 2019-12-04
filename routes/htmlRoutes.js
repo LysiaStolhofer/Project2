@@ -23,10 +23,21 @@ module.exports = function(app) {
     }
   });
 
+  // Load form page
+  app.get("/singleprofile", async (req, res) => {
+    try {
+      res.render("singleprofile");
+    } catch (error) {
+      res
+        .status(400)
+        .render("400", { error: { name: error.name, msg: error.message } });
+    }
+  });
   // Load Profiles page
   app.get("/profile", async (req, res) => {
     try {
-      res.render("profile");
+      const clients = await db.Clients.findAll();
+      res.render("profile", { clients });
     } catch (error) {
       res
         .status(400)
@@ -44,6 +55,7 @@ module.exports = function(app) {
         .render("400", { error: { name: error.name, msg: error.message } });
     }
   });
+
 
   app.get("/profile", async (req, res) => {
     try {
@@ -66,8 +78,9 @@ module.exports = function(app) {
   });
 
   // Load example page and pass in an example by id
+
   // Load Profile page and pass in a profile by id
-  app.get("/client/:id", async (req, res) => {
+  app.get("/profile/:id", async (req, res) => {
     try {
       const profile = await db.Clients.findOne({
         where: { id: req.params.id }
