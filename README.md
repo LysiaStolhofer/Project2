@@ -1,6 +1,31 @@
-# Project Starter
+# Primp & Play
 
-In this activity we will add the provided boilerplate to group project repos.
+Primp & Play is the perfect app for everyone who wants to make sure their pet is in the best hands, and does not want to make endless phone calls to make sure there is space and availability for their pets’ needs. Every pet owner can just easily create a profile for each of their pets, check in and check out online and book services/boarding and daycare.
+
+- Audience:  Any pet owner who likes easy and smooth service bookings and excellent daycare for their pet
+- Need: To make the best of their pets’ stay (without having to call for availability or to add services to their booking).
+- Give an overview of the clients bookings
+- Display of services, boarding and daycare options and costs 
+- Easy Check-In and Check-Out with the pets’ own profile
+
+Libraries and frameworks:
+-Javascript
+-jQuery
+-AJAX
+-Materialize CSS
+-Font Awesome
+-Material Icons
+-Responsive design
+-Date validation
+
+Technical details: 
+-deployed on Heroku 
+-Sequelize 
+-MySQL
+-node.js
+-express handlebars
+
+----------------------------------------------------------------------------------------------------------------------------------------
 
 ## Instructions
 
