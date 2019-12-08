@@ -9,21 +9,21 @@ Primp & Play is the perfect app for everyone who wants to make sure their pet is
 - Easy Check-In and Check-Out with the pets’ own profile
 
 Libraries and frameworks:
--Javascript
--jQuery
--AJAX
--Materialize CSS
--Font Awesome
--Material Icons
--Responsive design
--Date validation
+- Javascript
+- jQuery
+- AJAX
+- Materialize CSS
+- Font Awesome
+- Material Icons
+- Responsive design
+- Date validation
 
 Technical details: 
--deployed on Heroku 
--Sequelize 
--MySQL
--node.js
--express handlebars
+- deployed on Heroku 
+- Sequelize 
+- MySQL
+- node.js
+- express handlebars
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
